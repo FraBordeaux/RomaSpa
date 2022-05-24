@@ -1,1 +1,64 @@
 
+
+.card{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+}
+
+.log-in{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+input{
+    border: 1px solid #B89535;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid #B89535;
+}
+
+
+button{
+    background-color: transparent;
+    color: #B89535;
+    border: 1px solid #B89535;
+    margin: 0;
+    padding: 5px;
+}
+
+button:hover{
+    background-color: #B89535;
+    color: white;
+    border: 1px solid white;
+    margin: 0;
+    padding: 5px;
+}
+
+main a{
+    font-size: 0.5;
+    color: #B89535;
+}
+
+.sign-up{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    border-left: 0.5px solid gold;
+    padding-left: 30px;
+}
+
+.sign-up p{
+    font-size: 1.2em;
+}
