@@ -2,11 +2,12 @@ footer{
     width: 80%;
     min-width: 380px;
     max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
     color: #A8743F;
 }
 
 footer .top-section{
-    width: 80%;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
@@ -14,6 +15,11 @@ footer .top-section{
     
 footer .left-contact-info{
     width:40%;
+    min-width: 200px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items: center;
 }
  
 footer p{
@@ -31,12 +37,14 @@ footer .right-links{
     display:flex;
     flex-direction:column;
     justify-content:space-between;
-    align-content: center;
+    align-items: center;
 }
  
 footer .social-networks{
-    width:90%;
-    align-content:center;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    margin-top: 2em;
 }
 
 footer .social-networks img{
@@ -45,6 +53,8 @@ footer .social-networks img{
 
 footer .bottom-of-page{
     font-size:0.6em;
+    margin-top: 70px;
+    margin-bottom: 2em;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
