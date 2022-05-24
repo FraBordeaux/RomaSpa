@@ -26,6 +26,10 @@ header{
     height: 70vh;
 }
 
+.tabs{
+    margin: 10px 20px;
+}
+
 h2{
     color : #B89535;
     font-size: 2em;

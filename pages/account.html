@@ -1,1 +1,94 @@
-// user account page
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/account.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <script src="/scripts/account.js" defer></script>
+    <script src="/scripts/footer.js" defer></script>
+    <title>Roma | Compte utilisateur connecté</title>
+</head>
+<body>
+    
+    <header></header>
+
+    <main>
+
+        <div class="tabs">
+            <button id="user-address">Adresses</button>
+            <button id="user-payment">Moyens de paiement</button>
+            <button id="user-shipment-status">Suivi de commande</button>
+            <button id="user-history">Historique</button>
+        </div>
+
+        <h2>Bievenue!</h2>
+
+        <div class="selected-products">
+            
+            <div class="full-cart">
+                <h3>Voici les produits dans votre panier:</h3>
+
+                <p>Product Name</p>
+                <p>Product Price</p>
+
+                <p>Number of products in cart</p>
+                <p>Total price</p>
+        
+                <button id="pay">Régler</button>
+            </div>
+        </div>
+
+        <div class="reservation">
+
+            <form action="">
+
+                <div class="reserve-inactive">
+                    <button id="reserve-treatment">Réserver un soin</button>
+                </div>
+
+                <div class="reserve-active">
+                    <label for="treatment-date">Date préférée</label>
+                    <input type="date" name="treatment-date" id="treatment-date">
+
+                    <label for="treatment-timeframe">Horaires souhaités</label>
+                    <input type="datetime" name="treatment-timeframe" id="treatment-timeframe">
+
+                    <label for="treatment-category">Catégorie</label>
+                    <select name="treatment-category" id="treatment-category">
+                        <option value="facial">Soins du visage</option>
+                        <option value="body-scrub">Gommages du corps</option>
+                        <option value="massage">Massages</option>
+                        <option value="grand-ritual">Les Grands Rituels</option>
+                        <option value="grand-ritual">Soins en duo</option>
+                        <option value="grand-ritual">Privatisations</option>
+                    </select>
+
+                    <label for="treatment">Catégorie</label>
+                    <select name="treatment" id="treatment">
+                        <option value="facial">Soins du visage</option>
+                        <option value="body-scrub">Gommages du corps</option>
+                        <option value="massage">Massages</option>
+                        <option value="grand-ritual">Les Grands Rituels</option>
+                        <option value="grand-ritual">Soins en duo</option>
+                        <option value="grand-ritual">Privatisations</option>
+                    </select>
+
+                    <label for="user-message">Message</label>
+                    <textarea name="user-message" id="user-message" cols="30" rows="10"></textarea>
+
+                    <button type="reset">Réinitialiser</button>
+                    <button type="submit">Envoyer</button>
+
+                </div>
+
+            </form>
+        </div>
+
+    </main>
+
+    <footer></footer>
+
+</body>
+</html>

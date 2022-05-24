@@ -1,1 +1,64 @@
+@font-face {
+    font-family: "Fedra";
+    src: url("/assets/graphic-charter/fonts/Fedra\ Sans\ Light.ttf");
+}
 
+body{
+    padding:0;
+    margin:0;
+    font-family: "Fedra Book";
+}
+
+main{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabs{
+    margin-top: 20px;
+}
+
+header{
+    background-image: url('/assets/images/treatments/women-massaged.jpg');
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+}
+
+.selected-products{
+    display: flex;
+    flex-direction: column;
+}
+
+.selected-products .full-cart{
+    display: none;
+}
+
+.reserve-inactive{
+    display: block;
+}
+
+.reserve-active{
+    display: none;
+}
+
+
+
+button{
+    background-color: transparent;
+    color: #B89535;
+    border: 1px solid #B89535;
+    margin: 0;
+    padding: 5px;
+}
+
+button:hover{
+    background-color: #B89535;
+    color: white;
+    border: 1px solid white;
+    margin: 0;
+    padding: 5px;
+}
