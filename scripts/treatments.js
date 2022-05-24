@@ -34,6 +34,7 @@ for(let i = 0 ; i < allPrices.length ; i ++){
 
         vipPricingList.innerHTML +=
         `
+            <div class="card">
 
                 <div class="left-side">
                     <h4>${allPrices[i].treatmentName}</h4>
@@ -53,6 +54,7 @@ for(let i = 0 ; i < allPrices.length ; i ++){
     } else {
         pricingList.innerHTML += 
         `
+            <div class="card">
             
                 <div class="left-side">
                     <h4>${allPrices[i].treatmentName}</h4>
