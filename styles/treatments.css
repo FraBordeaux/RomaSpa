@@ -1,5 +1,62 @@
 main{
-    width: 80%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
+}
+
+header{
+    background-image: url('/assets/images/treatments/facial-massage.png');
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+
+h2{
+    color : #B89535;
+}
+
+h3{
+    color : white;
+    background-color: #004B62;
+    padding: 0.3em;
+}
+
+h4{
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-list, .vip-pricing-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.left-side{
+    display: flex;
+    flex-direction: column;
+    padding-right: 40px;
+    
+}
+
+.right-side{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 2em;
+    width: 40%;
+    height: 30px;
+}
+
+.right-side p{
+    min-width: 50px;
+}
+
+button{
+    background-color: transparent;
+    color: #B89535;
+    border: 1px solid #B89535;
+    margin: 0;
+    padding: 5px;
 }
