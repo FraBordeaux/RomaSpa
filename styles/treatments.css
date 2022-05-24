@@ -1,6 +1,14 @@
+@font-face {
+    font-family: "Fedra";
+    src: url("/assets/graphic-charter/fonts/Fedra\ Sans\ Light.ttf");
+}
+
+  
+
 body{
     padding:0;
     margin:0;
+    font-family: "Fedra Book";
 }
 
 main{
@@ -20,6 +28,7 @@ header{
 
 h2{
     color : #B89535;
+    font-size: 2em;
 }
 
 h3{
