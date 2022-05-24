@@ -1,1 +1,32 @@
-css file for header
+*{
+    padding : 0px;
+    margin : 0px;
+
+}
+
+header {
+    width : 100%;
+    height: 100vh;
+    display : flex;
+    justify-content: center;
+    margin : 0%;
+    
+}
+
+#logo_romaheader {
+    width : 200px;
+    height : 200px;
+ }
+
+#background_video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
