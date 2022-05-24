@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "Fedra";
+    src: url("/assets/graphic-charter/fonts/Fedra\ Sans\ Light.ttf");
+}
+
+  
+
+body{
+    padding:0;
+    margin:0;
+    font-family: "Fedra Book";
+}
+
 main{
     width: 70%;
     margin-left: auto;
@@ -15,6 +28,7 @@ header{
 
 h2{
     color : #B89535;
+    font-size: 2em;
 }
 
 h3{
@@ -53,13 +67,21 @@ h4{
 }
 
 .right-side p{
-    min-width: 50px;
+    min-width: 65px;
 }
 
 button{
     background-color: transparent;
     color: #B89535;
     border: 1px solid #B89535;
+    margin: 0;
+    padding: 5px;
+}
+
+button:hover{
+    background-color: #B89535;
+    color: white;
+    border: 1px solid white;
     margin: 0;
     padding: 5px;
 }
