@@ -1,3 +1,8 @@
+body{
+    padding:0;
+    margin:0;
+}
+
 main{
     width: 70%;
     margin-left: auto;
@@ -53,13 +58,21 @@ h4{
 }
 
 .right-side p{
-    min-width: 50px;
+    min-width: 65px;
 }
 
 button{
     background-color: transparent;
     color: #B89535;
     border: 1px solid #B89535;
+    margin: 0;
+    padding: 5px;
+}
+
+button:hover{
+    background-color: #B89535;
+    color: white;
+    border: 1px solid white;
     margin: 0;
     padding: 5px;
 }
