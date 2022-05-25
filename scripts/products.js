@@ -51,7 +51,7 @@ for(let i = 0 ; i < allProducts.length ; i ++){
 
 // get user information
 let retrievedUser = localStorage.getItem('user'); // local json string
-let userLoggedIn = JSON.parse(retrievedUser); // changed to object
+let user = JSON.parse(retrievedUser); // changed to object
 
 // retrieve all buy buttons
 const allBuyButtons = document.querySelectorAll(".button-buy");
@@ -63,8 +63,9 @@ allBuyButtons.forEach(item =>{
             name: item.name,
             value: item.value
         };
-        userLoggedIn.userCart.push(myObj);
-        localStorage.setItem('user', JSON.stringify(userLoggedIn));
+        user.userCart.push(myObj); // add product to cart
+        user.userCartTotal+= Number(item.value); // update total amount
+        localStorage.setItem('user', JSON.stringify(user)); // update user on localStorage
     })
 })
 

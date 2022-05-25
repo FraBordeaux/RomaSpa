@@ -62,7 +62,7 @@ function selectedProductList(cart){
         `
         <div class="cart-total">
             <p>Nombre de produits dans le panier : ${cart.length} </p>
-            <p>Prix total : 100€</p>
+            <p>Prix total : ${user.userCartTotal}€</p>
         </div>
         <button id="pay">Régler</button>
         `;

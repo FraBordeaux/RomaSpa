@@ -46,8 +46,9 @@ header{
     border-top: 1px solid gold;
 }
 
-button .pay{
-    float: right;
+#pay{
+    align-self: end;
+    width: min-content;
 }
 
 button{
