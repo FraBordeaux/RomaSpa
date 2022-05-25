@@ -1,13 +1,13 @@
 (function(d){
 
-    var itemClassName = "carousel__photo";
-    items = d.getElementsByClassName(itemClassName),
+  var itemClassName = "carousel__photo";
+  items = d.getElementsByClassName(itemClassName),
     totalItems = items.length,
     slide = 0,
     moving = true;
 
-    // Set classes
-function setInitialClasses() {
+  // Set classes
+  function setInitialClasses() {
     // Targets the previous, current, and next items
     // This assumes there are at least three items.
     items[totalItems - 1].classList.add("prev");
@@ -17,13 +17,13 @@ function setInitialClasses() {
   // Set event listeners
   function setEventListeners() {
     var next = d.getElementsByClassName('carousel__button--next')[0],
-        prev = d.getElementsByClassName('carousel__button--prev')[0];
+      prev = d.getElementsByClassName('carousel__button--prev')[0];
     next.addEventListener('click', moveNext);
     prev.addEventListener('click', movePrev);
   }
 
   // Next navigation handler
-function moveNext() {
+  function moveNext() {
     // Check if moving
     if (!moving) {
       // If it's the last slide, reset to 0, else +1
@@ -46,7 +46,7 @@ function moveNext() {
       } else {
         slide--;
       }
-            
+
       // Move carousel to updated slide
       moveCarouselTo(slide);
     }
@@ -55,30 +55,30 @@ function moveNext() {
   function disableInteraction() {
     // Set 'moving' to true for the same duration as our transition.
     // (0.5s = 500ms)
-    
+
     moving = true;
     // setTimeout runs its function once after the given time
-    setTimeout(function(){
+    setTimeout(function () {
       moving = false
     }, 500);
   }
 
   function moveCarouselTo(slide) {
     // Check if carousel is moving, if not, allow interaction
-    if(!moving) {
+    if (!moving) {
       // temporarily disable interactivity
       disableInteraction();
       // Update the "old" adjacent slides with "new" ones
       var newPrevious = slide - 1,
-          newNext = slide + 1,
-          oldPrevious = slide - 2,
-          oldNext = slide + 2;
+        newNext = slide + 1,
+        oldPrevious = slide - 2,
+        oldNext = slide + 2;
       // Test if carousel has more than three items
       if ((totalItems - 1) > 3) {
         // Checks and updates if the new slides are out of bounds
         if (newPrevious <= 0) {
           oldPrevious = (totalItems - 1);
-        } else if (newNext >= (totalItems - 1)){
+        } else if (newNext >= (totalItems - 1)) {
           oldNext = 0;
         }
         // Checks and updates if slide is at the beginning/end
@@ -86,7 +86,7 @@ function moveNext() {
           newPrevious = (totalItems - 1);
           oldPrevious = (totalItems - 2);
           oldNext = (slide + 1);
-        } else if (slide === (totalItems -1)) {
+        } else if (slide === (totalItems - 1)) {
           newPrevious = (slide - 1);
           newNext = 0;
           oldNext = 1;
