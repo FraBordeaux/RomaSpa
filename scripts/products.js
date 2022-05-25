@@ -27,6 +27,7 @@ class Product {
 
 let kitVoyage = new Product("Kit", "/assets/images/products/kit-voyage.jpg", "Collection Rituels de Beauté", ` Partez à la découverte des recettes de beauté ancestrales avec cette collection de 5 incontournables visage et corps. Des formats voyage rassemblés dans une charmante trousse qui ne quittera plus votre sac !`, 39, "15-30");
 let kitVoyage2 = new Product("Kit", "/assets/images/products/kit-voyage.jpg", "Collection Rituels de Beauté", ` Partez à la découverte des recettes de beauté ancestrales avec cette collection de 5 incontournables visage et corps. Des formats voyage rassemblés dans une charmante trousse qui ne quittera plus votre sac !`, 39, "15-30");
+let kitVoyage3 = new Product("Kit", "/assets/images/products/kit-voyage.jpg", "Collection Rituels de Beauté", ` Partez à la découverte des recettes de beauté ancestrales avec cette collection de 5 incontournables visage et corps. Des formats voyage rassemblés dans une charmante trousse qui ne quittera plus votre sac !`, 39, "15-30");
 
 
 const productList = document.querySelector(".product-list");
@@ -39,9 +40,8 @@ for(let i = 0 ; i < allProducts.length ; i ++){
             <div>
                     <img src="${allProducts[i].productImage}" /> 
                     <h4>${allProducts[i].productName}</h4>
+                    <p>${allProducts[i].productVolume} ml   |   ${allProducts[i].productPrice} €</p>
                     <p>${allProducts[i].productDescription}</p>
-                    <p>${allProducts[i].productPrice}€</p>
-                    <p>${allProducts[i].productVolume}ml</p>
                     <button class="button-buy" id="button${[i]}" name="${allProducts[i].productName}" value="${allProducts[i].productPrice}">Acheter</button>
                 
             </div>
