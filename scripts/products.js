@@ -3,12 +3,14 @@ let allProducts = [];
 
 
 class Product {
+    productCategory;
     productName;
     productDescription;
     productPrice;
     productVolume;
 
-    constructor(productName, productDescription, productPrice, productVolume){
+    constructor(productCategory, productName, productDescription, productPrice, productVolume){
+        this.productCategory = productCategory;
         this.productName = productName;
         this.productDescription = productDescription;
         this.productPrice = productPrice;
@@ -17,7 +19,7 @@ class Product {
     }
 }
 
-let kitVoyage = new Product("Collection Rituels de Beauté", ` Partez à la découverte des recettes de beauté ancestrales avec cette collection de 5 incontournables visage et corps. Des formats voyage rassemblés dans une charmante trousse qui ne quittera plus votre sac !`, 39, 15-30);
+let kitVoyage = new Product("Kit", "Collection Rituels de Beauté", ` Partez à la découverte des recettes de beauté ancestrales avec cette collection de 5 incontournables visage et corps. Des formats voyage rassemblés dans une charmante trousse qui ne quittera plus votre sac !`, 39, 15-30);
 
 
 const productList = document.querySelector(".product-list");
