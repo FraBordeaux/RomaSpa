@@ -59,9 +59,15 @@ const allBuyButtons = document.querySelectorAll(".button-buy");
 // if buy button clicked, add product to user cart.
 allBuyButtons.forEach(item =>{
     item.addEventListener("click", addToCart =>{
-        userLoggedIn.userCart.push(item.name, item.value);
-        console.log(("item added to cart :" + userLoggedIn.userCart));
+        let myObj = {
+            name: item.name,
+            value: item.value
+        };
+        userLoggedIn.userCart.push(myObj);
+        console.log(userLoggedIn.userCart);
+        console.log(("item added to cart :" + userLoggedIn.userCart[0].name));
         localStorage.setItem('user', JSON.stringify(userLoggedIn));
     })
 })
+
 

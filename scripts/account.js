@@ -10,6 +10,12 @@ const reserveTreatment = document.querySelector('#reserve-treatment'); // accoun
 const reserveInactive = document.querySelector('#reserve-inactive'); // inactive reserve form
 const reserveActive = document.querySelector('#reserve-active'); // active reserve form
 
+const selectedProducts = document.querySelector(".selected-products"); // account block, product section
+
+const loggedOut = document.querySelector(".logged-out"); // login block active
+const loggedIn = document.querySelector(".logged-in"); // account block active
+
+// class user
 class User {
     userFirstName;
     userLastName;
@@ -37,14 +43,21 @@ class User {
     updateCart(){
         let retrieveUserInfo = localStorage.getItem('user');
         console.log("retrieved user info : " +retrieveUserInfo);
-    }
-}
+        let userInfoObject = JSON.parse(retrieveUserInfo);
+        
+        if((userInfoObject.userCart.length) === 0){
+            buttonPlaceHolder();
+        } else {
+            selectedProductList(userInfoObject.userCart);
+        }
+    }// end updateCart function
+         
+} // end class
 
+// create user
 let userFra = new User("Francesca", "Nadel", {"domicile":"Bordeaux"}, "fra@gmail.com", "0622000452", "0622000452", "30/05/1977")
 
-const loggedOut = document.querySelector(".logged-out")
-const loggedIn = document.querySelector(".logged-in")
-
+// user logged in 
 userLogIn.addEventListener("click", logIn =>{
     userFra.loggedIn = true;    // user is logged in
     loggedOut.style.display = "none"; // remove login block
@@ -53,6 +66,7 @@ userLogIn.addEventListener("click", logIn =>{
     localStorage.setItem('user', JSON.stringify(userFra)); // create user in localStorage
 })
 
+// user logged out
 userLogOut.addEventListener("click", logOut =>{
     userFra.loggedIn = false;
     loggedOut.style.display = "block";
@@ -60,5 +74,45 @@ userLogOut.addEventListener("click", logOut =>{
     
 })
 
+// update user cart when page refreshed
 userFra.updateCart();
-console.log((userFra.userCart));
+
+function buttonPlaceHolder(){
+    console.log("button place holder function");
+    selectedProducts.innerHTML =
+    `
+    <div class="empty-cart">
+        <button id="descover-products"><a href="/pages/products.html">Découvrir nos produits</a></button>
+    </div>
+    `;
+}
+        
+function selectedProductList(cart){
+    console.log("selected product list");
+    selectedProducts.innerHTML =
+    `
+    <div class="full-cart">
+        <h3>Voici les produits dans votre panier:</h3>
+    `;
+
+    /*
+    cart.forEach(item =>{
+        selectedProducts.innerHTML +=
+        `
+        <div class="items-in-cart">
+            <p>${item.name}</p>
+            <p>${item.value}€</p>
+        </div>
+        `;
+    })*/
+        
+    
+    selectedProducts.innerHTML +=
+        `
+        <div class="cart-total">
+            <p>Nombre de produits dans le panier : ${cart.length/2} </p>
+            <p>Prix total : ${cart[1]} </p>
+        </div>
+        <button id="pay">Régler</button>
+        `;
+}

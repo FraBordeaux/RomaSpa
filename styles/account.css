@@ -33,6 +33,23 @@ header{
     flex-direction: column;
 }
 
+.items-in-cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart-total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid gold;
+}
+
+button .pay{
+    float: right;
+}
+
 button{
     background-color: transparent;
     color: #B89535;
