@@ -64,8 +64,6 @@ allBuyButtons.forEach(item =>{
             value: item.value
         };
         userLoggedIn.userCart.push(myObj);
-        console.log(userLoggedIn.userCart);
-        console.log(("item added to cart :" + userLoggedIn.userCart[0].name));
         localStorage.setItem('user', JSON.stringify(userLoggedIn));
     })
 })

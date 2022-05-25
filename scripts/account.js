@@ -25,6 +25,7 @@ class User {
     userDateOfBirth;
     userAddresses=[];
     userCart=[];
+    userCartTotal=0;
     userTreatment=[];
     userFollowOrder=[];
     userHistory=[];
@@ -41,14 +42,13 @@ class User {
     }
 
     updateCart(){
-        let retrieveUserInfo = localStorage.getItem('user');
-        console.log("retrieved user info : " +retrieveUserInfo);
-        let userInfoObject = JSON.parse(retrieveUserInfo);
+        let retrieveUserInfo = localStorage.getItem('user'); // format string
+        let userObj = JSON.parse(retrieveUserInfo);// format objet
         
-        if((userInfoObject.userCart.length) === 0){
+        if((userObj.userCart.length) === 0){
             buttonPlaceHolder();
         } else {
-            selectedProductList(userInfoObject.userCart);
+            selectedProductList(userObj.userCart);
         }
     }// end updateCart function
          
@@ -78,7 +78,6 @@ userLogOut.addEventListener("click", logOut =>{
 userFra.updateCart();
 
 function buttonPlaceHolder(){
-    console.log("button place holder function");
     selectedProducts.innerHTML =
     `
     <div class="empty-cart">
@@ -88,14 +87,13 @@ function buttonPlaceHolder(){
 }
         
 function selectedProductList(cart){
-    console.log("selected product list");
     selectedProducts.innerHTML =
     `
     <div class="full-cart">
         <h3>Voici les produits dans votre panier:</h3>
     `;
 
-    /*
+    
     cart.forEach(item =>{
         selectedProducts.innerHTML +=
         `
@@ -104,14 +102,14 @@ function selectedProductList(cart){
             <p>${item.value}€</p>
         </div>
         `;
-    })*/
+    })
         
     
     selectedProducts.innerHTML +=
         `
         <div class="cart-total">
-            <p>Nombre de produits dans le panier : ${cart.length/2} </p>
-            <p>Prix total : ${cart[1]} </p>
+            <p>Nombre de produits dans le panier : ${cart.length} </p>
+            <p>Prix total : 100€</p>
         </div>
         <button id="pay">Régler</button>
         `;
