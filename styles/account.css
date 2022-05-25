@@ -1,34 +1,39 @@
 @font-face {
     font-family: "Fedra";
     src: url("/assets/graphic-charter/fonts/Fedra\ Sans\ Light.ttf");
-  }
-  
-  body{
+}
+
+body{
     padding:0;
     margin:0;
     font-family: "Fedra Book";
-  }
-  
-  main{
+}
+
+main{
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-  }
-  
-  .tabs{
+}
+
+.tabs{
     margin-top: 20px;
-  }
-  
-  header{
+}
+
+header{
     background-image: url('/assets/images/treatments/women-massaged.jpg');
     width:100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 40vh;
-  }
-  
-  button{
+}
+
+.selected-products{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
     background-color: transparent;
     color: #B89535;
     border: 1px solid #B89535;
@@ -36,9 +41,9 @@
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 5px;
-  }
-  
-  button:hover{
+}
+
+button:hover{
     background-color: #B89535;
     color: white;
     border: 1px solid white;
@@ -46,83 +51,80 @@
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 5px;
-  }
-  
-  button a{
+}
+
+button a{
     text-decoration: none;
     color: #B89535;
-  }
-  
-  button a:hover{
+}
+
+button a:hover{
     text-decoration: none;
     color: white;
-  }
-  
-  /* Modal */
-  /* Modal : background */
-  .modal {
-      display: none; /* Hidden par défaut */
-      position: fixed; /* Garder en place */
-      z-index: 1; /* Affiché par dessus */
-      left: 0;
-      top: 0;
-      width: 100%; 
-      height: 100%; 
-      overflow: auto; /* Active le scroll Y si besoin */
-      background-color: rgb(0,0,0); /* Couleur d'arrière-plan */
-      background-color: rgba(0,0,0,0.4); 
-    }
-    
-    /* Modal : contenu */
-    .modal-content {
-      background-color: #fefefe;
-      margin: 15% auto; /* 15% du haut de la page et centré  */
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%; /* Pourrait être plus, ça dépendra de ce que l'on veut */
-    }
-    
-    /* Modal : bouton fermer */
-    .close {
-      color: #aaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-    
-    .close:hover, .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-  
-  
-    /* Formulaire */
-    .form-field {
-      margin: 1.5em 0;
-  }
-  
-  .form-field label {
-      display: block;
-      color: #777;
-      margin-bottom: 5px;
-  }
-  
-  .form-field input, .form-field select {
-      border: solid 2px #f0f0f0;
-      border-radius: 3px;
-      padding: 10px;
-      margin-bottom: 5px;
-      font-size: 14px;
-      display: block;
-      width: 100%;
-      box-sizing: border-box;
-  }
-  
-  .form-field input:focus {
-      outline: none;
-  }
-  
-  .center {
-    text-align: center;
-  }
+}
+
+
+
+.card{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+}
+
+.log-in{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+input{
+    border: 1px solid #B89535;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid #B89535;
+}
+
+/*
+button{
+    background-color: transparent;
+    color: #B89535;
+    border: 1px solid #B89535;
+    margin: 0;
+    padding: 5px;
+}
+
+button:hover{
+    background-color: #B89535;
+    color: white;
+    border: 1px solid white;
+    margin: 0;
+    padding: 5px;
+}
+*/
+
+main a{
+    font-size: 0.5;
+    color: #B89535;
+}
+
+.sign-up{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    border-left: 0.5px solid gold;
+    padding-left: 30px;
+}
+
+.sign-up p{
+    font-size: 1.2em;
+}
