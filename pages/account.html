@@ -16,79 +16,67 @@
 
     <main>
 
-        <div class="tabs">
-            <button id="user-address">Adresses</button>
-            <button id="user-payment">Moyens de paiement</button>
-            <button id="user-shipment-status">Suivi de commande</button>
-            <button id="user-history">Historique</button>
-        </div>
+        <section class="logged-in">
+            <div class="tabs">
+                <button id="user-address">Adresses</button>
+                <button id="user-payment">Moyens de paiement</button>
+                <button id="user-shipment-status">Suivi de commande</button>
+                <button id="user-history">Historique</button>
+                <button id="logout">Se déconnecter</button>
 
-        <h2>Bievenue!</h2>
-
-        <div class="selected-products">
-            
-            <div class="empty-cart">
-                <button id="descover-products"><a href="/pages/products.html">Découvrir nos produits</a></button>
             </div>
 
-            <div class="full-cart">
-                <h3>Voici les produits dans votre panier:</h3>
+            <h2></h2>
 
-                <p>Product Name</p>
-                <p>Product Price</p>
+            <div class="selected-products"></div>
 
-                <p>Number of products in cart</p>
-                <p>Total price</p>
-        
-                <button id="pay">Régler</button>
+            <div class="reservation">
+
+                <form>
+
+                    <div id="reserve-inactive" style="display: block;">
+                        <button id="reserve-treatment">Réserver un soin</button>
+                    </div>
+
+                    <div id="reserve-active" style="display:none">
+                        <label for="treatment-date">Date préférée</label>
+                        <input type="date" name="treatment-date" id="treatment-date">
+
+                        <label for="treatment-timeframe">Horaires souhaités</label>
+                        <input type="datetime" name="treatment-timeframe" id="treatment-timeframe">
+
+                        <label for="treatment-category">Catégorie</label>
+                        <select name="treatment-category" id="treatment-category">
+                            <option value="facial">Soins du visage</option>
+                            <option value="body-scrub">Gommages du corps</option>
+                            <option value="massage">Massages</option>
+                            <option value="grand-ritual">Les Grands Rituels</option>
+                            <option value="grand-ritual">Soins en duo</option>
+                            <option value="grand-ritual">Privatisations</option>
+                        </select>
+
+                        <label for="treatment">Catégorie</label>
+                        <select name="treatment" id="treatment">
+                            <option value="facial">Soins du visage</option>
+                            <option value="body-scrub">Gommages du corps</option>
+                            <option value="massage">Massages</option>
+                            <option value="grand-ritual">Les Grands Rituels</option>
+                            <option value="grand-ritual">Soins en duo</option>
+                            <option value="grand-ritual">Privatisations</option>
+                        </select>
+
+                        <label for="user-message">Message</label>
+                        <textarea name="user-message" id="user-message" cols="30" rows="10"></textarea>
+
+                        <button type="reset">Réinitialiser</button>
+                        <button type="submit">Envoyer</button>
+
+                    </div>
+
+                </form>
             </div>
-        </div>
 
-        <div class="reservation">
-
-            <form>
-
-                <div id="reserve-inactive">
-                    <button id="reserve-treatment">Réserver un soin</button>
-                </div>
-
-                <div id="reserve-active">
-                    <label for="treatment-date">Date préférée</label>
-                    <input type="date" name="treatment-date" id="treatment-date">
-
-                    <label for="treatment-timeframe">Horaires souhaités</label>
-                    <input type="datetime" name="treatment-timeframe" id="treatment-timeframe">
-
-                    <label for="treatment-category">Catégorie</label>
-                    <select name="treatment-category" id="treatment-category">
-                        <option value="facial">Soins du visage</option>
-                        <option value="body-scrub">Gommages du corps</option>
-                        <option value="massage">Massages</option>
-                        <option value="grand-ritual">Les Grands Rituels</option>
-                        <option value="grand-ritual">Soins en duo</option>
-                        <option value="grand-ritual">Privatisations</option>
-                    </select>
-
-                    <label for="treatment">Catégorie</label>
-                    <select name="treatment" id="treatment">
-                        <option value="facial">Soins du visage</option>
-                        <option value="body-scrub">Gommages du corps</option>
-                        <option value="massage">Massages</option>
-                        <option value="grand-ritual">Les Grands Rituels</option>
-                        <option value="grand-ritual">Soins en duo</option>
-                        <option value="grand-ritual">Privatisations</option>
-                    </select>
-
-                    <label for="user-message">Message</label>
-                    <textarea name="user-message" id="user-message" cols="30" rows="10"></textarea>
-
-                    <button type="reset">Réinitialiser</button>
-                    <button type="submit">Envoyer</button>
-
-                </div>
-
-            </form>
-        </div>
+        </section>
 
     </main>
 

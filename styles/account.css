@@ -17,6 +17,8 @@ main{
 
 .tabs{
     margin-top: 20px;
+    text-align: center;
+    background-color: #B89535;
 }
 
 header{
@@ -33,26 +35,57 @@ header{
     flex-direction: column;
 }
 
-.selected-products .empty-cart{
-    display: block;
+.items-in-cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.selected-products .full-cart{
-    display: none;
+.cart-total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid gold;
 }
 
-
-#reserve-inactive{
-    display: block;
+#pay{
+    align-self: end;
+    width: min-content;
 }
-#reserve-active{
-    display: none;
-}
-
 
 button{
-    background-color: transparent;
+    background-color: #B89535;
+    color: white;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid transparent;
+}
+
+button:hover{
+    background-color: white;
     color: #B89535;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #B89535;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+}
+
+button a:hover{
+    text-decoration: none;
+    color: #B89535;
+}
+
+.tabs button{
+    background-color: transparent;
+    color: white;
     border: 1px solid #B89535;
     margin: 0;
     margin-top: 10px;
@@ -60,7 +93,7 @@ button{
     padding: 5px;
 }
 
-button:hover{
+.tabs button:hover{
     background-color: #B89535;
     color: white;
     border: 1px solid white;
@@ -70,12 +103,43 @@ button:hover{
     padding: 5px;
 }
 
-button a{
-    text-decoration: none;
-    color: #B89535;
+.card{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
 }
 
-button a:hover{
-    text-decoration: none;
-    color: white;
+.log-in{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+input{
+    border: 1px solid #B89535;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid #B89535;
+}
+
+.sign-up{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    border-left: 0.5px solid gold;
+    padding-left: 30px;
+}
+
+.sign-up p{
+    font-size: 1.2em;
 }

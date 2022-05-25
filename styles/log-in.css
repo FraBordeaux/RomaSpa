@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: row;
     column-gap: 30px;
+    border: 1px solid lightgoldenrodyellow;
 }
 
 .log-in{
@@ -48,6 +49,13 @@ button:hover{
 main a{
     font-size: 0.5;
     color: #B89535;
+    text-decoration: none;
+}
+
+main a:hover{
+    font-size: 0.5;
+    color: white;
+    text-decoration: none;
 }
 
 .sign-up{
