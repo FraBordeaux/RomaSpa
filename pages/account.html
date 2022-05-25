@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="/styles/account.css">
     <link rel="stylesheet" href="/styles/footer.css">
     <script src="/scripts/account.js" defer></script>
-    <script src="/scripts/footer.js" defer></script>
-    <title>Roma | Compte utilisateur connecté</title>
+    <script src="/scripts/footer.js"></script>
 </head>
 <body>
-    
     <header></header>
-
     <main>
-
+        
+    
         <div class="tabs">
             <button id="user-address">Adresses</button>
             <button id="user-payment">Moyens de paiement</button>
@@ -24,42 +23,50 @@
         </div>
 
         <h2>Bievenue!</h2>
-
-        <div class="selected-products">
-            
-            <div class="empty-cart">
-                <button id="descover-products"><a href="/pages/products.html">Découvrir nos produits</a></button>
-            </div>
-
-            <div class="full-cart">
-                <h3>Voici les produits dans votre panier:</h3>
-
-                <p>Product Name</p>
-                <p>Product Price</p>
-
-                <p>Number of products in cart</p>
-                <p>Total price</p>
-        
-                <button id="pay">Régler</button>
-            </div>
+    
+        <!--shopping cart-->
+        <div class="empty-cart" style="display: block;">
+            <button id="descover-products"><a href="/pages/products.html">Découvrir nos produits</a></button>
         </div>
 
-        <div class="reservation">
+        <div class="full-cart" style="display:none;">
+            <h3>Voici les produits dans votre panier:</h3>
 
-            <form>
+            <p>Product Name</p>
+            <p>Product Price</p>
 
-                <div id="reserve-inactive">
-                    <button id="reserve-treatment">Réserver un soin</button>
+            <p>Number of products in cart</p>
+            <p>Total price</p>
+    
+            <button id="pay">Régler</button>
+        </div>
+
+        <!--reservation-->
+        <button id="get-datas" style="display:none">Récupérer données</button>
+        <button id="post-datas">Ajouter une donnée</button>
+    
+    </main>
+    
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+            <form id="edit-user-form">
+
+                <div class="form-field">
+                    <label for="treatmentDate">Date préférée</label>
+                    <input type="date" id="treatmentDate" name="treatmentDate">
+                </div>
+                
+                <div class="form-field">
+                    <label for="treatmentTime">Horaires préférés</label>
+                    <input type="datetime" id="treatmentTime" name="treatmentTime">
                 </div>
 
-                <div id="reserve-active">
-                    <label for="treatment-date">Date préférée</label>
-                    <input type="date" name="treatment-date" id="treatment-date">
-
-                    <label for="treatment-timeframe">Horaires souhaités</label>
-                    <input type="datetime" name="treatment-timeframe" id="treatment-timeframe">
-
-                    <label for="treatment-category">Catégorie</label>
+                <div class="form-field">
+                <label for="treatment-category">Catégorie</label>
                     <select name="treatment-category" id="treatment-category">
                         <option value="facial">Soins du visage</option>
                         <option value="body-scrub">Gommages du corps</option>
@@ -68,7 +75,9 @@
                         <option value="grand-ritual">Soins en duo</option>
                         <option value="grand-ritual">Privatisations</option>
                     </select>
-
+                </div>
+                
+                <div class="form-field">
                     <label for="treatment">Catégorie</label>
                     <select name="treatment" id="treatment">
                         <option value="facial">Soins du visage</option>
@@ -78,21 +87,28 @@
                         <option value="grand-ritual">Soins en duo</option>
                         <option value="grand-ritual">Privatisations</option>
                     </select>
-
-                    <label for="user-message">Message</label>
-                    <textarea name="user-message" id="user-message" cols="30" rows="10"></textarea>
-
-                    <button type="reset">Réinitialiser</button>
-                    <button type="submit">Envoyer</button>
-
                 </div>
 
+                <div class="form-field">
+                    <label for="user-message">Message</label>
+                    <textarea name="user-message" id="user-message" cols="30" rows="10"></textarea>
+                </div>    
+                    
+                <div class="form-field center">
+                    <button type="reset">Réinitialiser</button>
+                    <button type="submit">Envoyer</button>
+                </div>
+           
             </form>
         </div>
+      
+      </div>
 
-    </main>
+
+
+
 
     <footer></footer>
-
+    
 </body>
 </html>
