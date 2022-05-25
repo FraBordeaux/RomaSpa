@@ -21,19 +21,21 @@
             <div class="log-in">
                 
                 <label for="user-email">Adresse mail</label>
-                <input type="email" name="user-email" id="user-email">
+                <input type="email" name="user-email" id="user-email" oninput="registerEmail(this.value)">
 
                 <label for="user-password">Mot de passe</label>
-                <input type="password" name="user-password" id="user-password">
+                <input type="password" name="user-password" id="user-password" oninput="registerPassword(this.value)">
 
-                <button id="connecter">Se Connecter</button>
-                <a href="mdp-oublie.html">Mot de passe oublié</a>
+                <p id="login-error" style="display: none; font-size: 0.6em;">Erreur : mail ou mot de passe pas reconnus.</p>
+
+                <button id="login">Se Connecter</button>
+                <a href="mdp-oublie.html" style="font-size:0.7em;">Mot de passe oublié</a>
 
             </div>
 
             <div class="sign-up">
                 <p>Créer un compte</p>
-                <button id="inscrire">S'inscrire</button>
+                <button id="signup"><a href="sign-up.html">S'inscrire</a></button>
             </div>
 
         </div>

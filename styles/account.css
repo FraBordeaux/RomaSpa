@@ -51,6 +51,36 @@ button .pay{
 }
 
 button{
+    background-color: #B89535;
+    color: white;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid transparent;
+}
+
+button:hover{
+    background-color: white;
+    color: #B89535;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #B89535;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+}
+
+button a:hover{
+    text-decoration: none;
+    color: #B89535;
+}
+
+.tabs button{
     background-color: transparent;
     color: #B89535;
     border: 1px solid #B89535;
@@ -60,7 +90,7 @@ button{
     padding: 5px;
 }
 
-button:hover{
+.tabs button:hover{
     background-color: #B89535;
     color: white;
     border: 1px solid white;
@@ -69,18 +99,6 @@ button:hover{
     margin-bottom: 10px;
     padding: 5px;
 }
-
-button a{
-    text-decoration: none;
-    color: #B89535;
-}
-
-button a:hover{
-    text-decoration: none;
-    color: white;
-}
-
-
 
 .card{
     width: 70%;
@@ -108,29 +126,6 @@ input{
 input:focus{
     outline: none;
     border: 2px solid #B89535;
-}
-
-/*
-button{
-    background-color: transparent;
-    color: #B89535;
-    border: 1px solid #B89535;
-    margin: 0;
-    padding: 5px;
-}
-
-button:hover{
-    background-color: #B89535;
-    color: white;
-    border: 1px solid white;
-    margin: 0;
-    padding: 5px;
-}
-*/
-
-main a{
-    font-size: 0.5;
-    color: #B89535;
 }
 
 .sign-up{
