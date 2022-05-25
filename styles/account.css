@@ -17,6 +17,8 @@ main{
 
 .tabs{
     margin-top: 20px;
+    text-align: center;
+    background-color: #B89535;
 }
 
 header{
@@ -83,7 +85,7 @@ button a:hover{
 
 .tabs button{
     background-color: transparent;
-    color: #B89535;
+    color: white;
     border: 1px solid #B89535;
     margin: 0;
     margin-top: 10px;
