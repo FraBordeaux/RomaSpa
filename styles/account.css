@@ -121,7 +121,19 @@ button a:hover{
     column-gap: 30px;
 }
 
-
+.change {
+    opacity: 0;
+  }
+.m-fadeOut {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
+  }
+  .m-fadeIn {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+  }
 
 /* Modal */
 /* Modal : background */
@@ -137,7 +149,7 @@ button a:hover{
     top: 20px;
     margin-left: 10px;
     width: 45%; 
-    height: fit-content; 
+    height: 600px; 
     overflow: auto; /* Active le scroll Y si besoin */
     background-color: whitesmoke; 
 }
@@ -187,24 +199,4 @@ button a:hover{
 
 .form-field small {
     color: var(--error-color);
-}
-
-
-
-
-.message-sent {
-  margin: 8px 0px;
-  padding: 8px;
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  transform: translate(-50%, -50%);
-}
-
-
-
-.fade{
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s 2s, opacity 2s linear;
 }

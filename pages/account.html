@@ -30,7 +30,6 @@
             <h2></h2>
             <div class="selected-products"></div>
             <button id="reserve-treatment">Réserver un soin</button>
-            <p class="message-sent" style="visibility: hidden;">Votre message a été envoyé</p>
         </div>
 
         <!-- pop up window to reserve a treatment-->
@@ -52,30 +51,17 @@
                     <small></small>
                 </div>
     
+                <!-- dropdown menu of all categories -->
                 <div class="form-field">
                     <label for="treatment-category">Catégorie</label>
-                        <select name="treatment-category" id="treatment-category">
-                            <option value="facial">Soins du visage</option>
-                            <option value="body-scrub">Gommages du corps</option>
-                            <option value="massage">Massages</option>
-                            <option value="grand-ritual">Les Grands Rituels</option>
-                            <option value="grand-ritual">Soins en duo</option>
-                            <option value="grand-ritual">Privatisations</option>
-                        </select>
+                        <select name="treatment-category" id="treatment-category" class="treatment-category" onChange="update()"></select>
                     <small></small>
                 </div>
     
     
                 <div class="form-field">
                     <label for="treatment">Soin</label>
-                    <select name="treatment" id="treatment">
-                        <option value="facial">Soins du visage</option>
-                        <option value="body-scrub">Gommages du corps</option>
-                        <option value="massage">Massages</option>
-                        <option value="grand-ritual">Les Grands Rituels</option>
-                        <option value="grand-ritual">Soins en duo</option>
-                        <option value="grand-ritual">Privatisations</option>
-                    </select>
+                    <select name="treatment" id="treatment"></select>
                     <small></small>
                 </div>
     

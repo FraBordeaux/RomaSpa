@@ -18,6 +18,7 @@ class Product {
         this.productPrice = productPrice;
         this.productVolume = productVolume;
         allProducts.push(this);
+        localStorage.setItem('products', JSON.stringify(allProducts)); // create product list in localStorage
     }
 
     placeInCart(){
