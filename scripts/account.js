@@ -20,6 +20,7 @@ console.log(treatmentList);
 const uniqueTreatments = [...new Map(treatmentList.map(item => [item.treatmentCategory, item])).values()]// remove duplicates
 
 let treatmentCategory = document.querySelector("#treatment-category");// retrieve treatment category dropdown menu in modal
+let treatType = document.querySelector("#treatment");// retrieve treatment dropdown menu in modal
 
 // add unique categories (no duplicates) to dropdown menu
 uniqueTreatments.forEach(element =>{
@@ -31,12 +32,20 @@ uniqueTreatments.forEach(element =>{
 
 // retrieve selected category
 function update() {
-    var option = treatmentCategory.options[treatmentCategory.selectedIndex].value;
-   
-    const selectedCat = treatmentList.filter(word => word === option)
+    const option = treatmentCategory.options[treatmentCategory.selectedIndex].value; // selected category
+    const selectedCat = treatmentList.filter(item => item["treatmentCategory"] === option);
     console.log(selectedCat);
-    
+   
+    selectedCat.forEach(element =>{
+        treatType.innerHTML +=
+        `
+        <option value="${element.treatmentName}">${element.treatmentName}</option>
+        `;
+    })
 }
+
+
+
 
 
 
