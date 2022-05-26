@@ -16,27 +16,22 @@
 
     <main>
 
-        <section class="logged-in">
-            <div class="tabs">
-                <button id="user-address">Adresses</button>
-                <button id="user-payment">Moyens de paiement</button>
-                <button id="user-shipment-status">Suivi de commande</button>
-                <button id="user-history">Historique</button>
-                <button id="logout">Se déconnecter</button>
+        <!-- tabs to other account pages -->
+        <div class="tabs">
+            <button id="user-address">Adresses</button>
+            <button id="user-payment">Moyens de paiement</button>
+            <button id="user-shipment-status">Suivi de commande</button>
+            <button id="user-history">Historique</button>
+            <button id="logout">Se déconnecter</button>
+        </div>
 
-            </div>
-
+        <!-- account information section : products and treatment reservation -->
+        <div class="account-info">
             <h2></h2>
-
             <div class="selected-products"></div>
+            <button id="reserve-treatment">Réserver un soin</button>
+        </div>
 
-            <div class="reservation">
-
-                <form>
-
-                    <div id="reserve-inactive" style="display: block;">
-                        <button id="reserve-treatment">Réserver un soin</button>
-                    </div>
 
                     <div id="reserve-active" style="display:none">
                         <label for="treatment-date">Date préférée</label>
@@ -73,10 +68,10 @@
 
                     </div>
 
-                </form>
-            </div>
+              
+    
 
-        </section>
+       
 
     </main>
 

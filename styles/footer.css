@@ -5,6 +5,7 @@ footer{
     margin-right: auto;
     margin-left: auto;
     color: #A8743F;
+    border-top: 1px solid #A8743F;
 }
 
 footer .top-section{
