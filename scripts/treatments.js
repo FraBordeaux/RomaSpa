@@ -5,12 +5,12 @@ let allTreatments = [];
 class Treatment {
     treatmentCategory;
     treatmentName;
-    description;
-    timing;
-    price;
-    VIP;
+    treatmentDescription;
+    treatmentTiming;
+    treatmentPrice;
+    treatmentVIP;
 
-    constructor(treatmentCategory, treatmentName, description, timing, price, VIP){
+    constructor(treatmentCategory, treatmentName, treatmentDescription, treatmentTiming, treatmentPrice, treatmentVIP){
         this.treatmentCategory = treatmentCategory;
         this.treatmentName = treatmentName;
         this.treatmentDescription = treatmentDescription;
@@ -18,8 +18,10 @@ class Treatment {
         this.treatmentPrice = treatmentPrice;
         this.treatmentVIP = treatmentVIP;
         allTreatments.push(this);
+        localStorage.setItem('treatments', JSON.stringify(allTreatments)); // create list of all treatments in localStorage
     }
 }
+
 
 
 // list of treatments:
@@ -47,6 +49,7 @@ let ritualDuo = new Treatment("Grand rituel", "Grand Rituel de Félicité à Deu
 let privateDuo = new Treatment("Privatization à deux", "Palace pour Deux", `Profitez d'un espace privé pour profiter des soins. Accès privé vers la piscine en extérieur. Il est possible d'ajouter d'autres options.`,180, 300, true);
 let privateHotTub = new Treatment("Privatization à plusieurs", "Enterrement Vie de Jeune Fille/Garçon", `Privatisation d'un espace avec un grand bain à rému. Plusieurs options peuvent être ajoutés : soins, repas, boissons. Limité à 8 personnes`,180, 300, true);
 
+console.log(allTreatments);
 
 // retrieve placements
 const pricingList = document.querySelector(".pricing-list");
@@ -64,12 +67,12 @@ for(let i = 0 ; i < allTreatments.length ; i ++){
 
                 <div class="left-side">
                     <h4>${allTreatments[i].treatmentName}</h4>
-                    <p>${allTreatments[i].description}</p>
+                    <p>${allTreatments[i].treatmentDescription}</p>
                 </div>
 
                 <div class="right-side">
-                    <p>${allTreatments[i].timing} min</p>
-                    <p>${allTreatments[i].price} €</p>
+                    <p>${allTreatments[i].treatmentTiming} min</p>
+                    <p>${allTreatments[i].treatmentPrice} €</p>
                     <button class="reserve-button">Réserver</button>
                 </div>
 
@@ -84,12 +87,12 @@ for(let i = 0 ; i < allTreatments.length ; i ++){
             
                 <div class="left-side">
                 <h4>${allTreatments[i].treatmentName}</h4>
-                <p>${allTreatments[i].description}</p>
+                <p>${allTreatments[i].treatmentDescription}</p>
             </div>
 
             <div class="right-side">
-                <p>${allTreatments[i].timing} min</p>
-                <p>${allTreatments[i].price} €</p>
+                <p>${allTreatments[i].treatmentTiming} min</p>
+                <p>${allTreatments[i].treatmentPrice} €</p>
                     <button class="reserve-button">Réserver</button>
                 </div>
             

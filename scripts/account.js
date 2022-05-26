@@ -4,8 +4,41 @@ const payButton = document.querySelector('#pay'); // account page, pay button
 const reserveTreatment = document.querySelector('#reserve-treatment'); // account page, reserve button
 const selectedProducts = document.querySelector(".selected-products"); // account block, product section
 
+// retrieve user signed-up
 let retrieveUserInfo = localStorage.getItem('user'); // format string
 let user = JSON.parse(retrieveUserInfo);// format objet
+
+// retrieve product list
+let getProductList = localStorage.getItem('products'); // format string
+let productList = JSON.parse(getProductList);// format objet
+const uniqueProducts = [...new Map(productList.map(item => [item.id, item])).values()]// remove duplicates
+
+// retrieve treatment list
+let getTreatmentList = localStorage.getItem('treatments'); // format string
+let treatmentList = JSON.parse(getTreatmentList);// format objet
+console.log(treatmentList);
+const uniqueTreatments = [...new Map(treatmentList.map(item => [item.treatmentCategory, item])).values()]// remove duplicates
+
+let treatmentCategory = document.querySelector("#treatment-category");// retrieve treatment category dropdown menu in modal
+
+// add unique categories (no duplicates) to dropdown menu
+uniqueTreatments.forEach(element =>{
+    treatmentCategory.innerHTML +=
+    `
+    <option value="${element.treatmentCategory}">${element.treatmentCategory}</option>
+    `;
+})
+
+// retrieve selected category
+function update() {
+    var option = treatmentCategory.options[treatmentCategory.selectedIndex].value;
+   
+    const selectedCat = treatmentList.filter(word => word === option)
+    console.log(selectedCat);
+    
+}
+
+
 
 // user logged in 
 document.querySelector("h2").innerText = `Bienvenue ${user.userFirstName}!`; // welcome message
@@ -68,7 +101,6 @@ function selectedProductList(cart){
 
 let treatmentDate = document.querySelector('#treatment-date');
 let treatmentTime = document.querySelector('#treatment-timeframe');
-let treatmentCategory = document.querySelector('#treatment-category');
 let treatment = document.querySelector('#treatment');
 let resetBtn = document.querySelector('#reset');
 let submitBtn = document.querySelector('#submit');
@@ -77,17 +109,11 @@ const modal = document.querySelector(".myModal");
 const span = document.getElementsByClassName("close")[0];
 let messageSent = document.querySelector(".message-sent");
 
-submitBtn.addEventListener("click", () =>{
-    container.style.display = "none";
-})
-
-
 /**
  * ---------------------------
  * MODAL
  * --------------------------
 * */
-
 reserveTreatment.addEventListener("click", openModal =>{
     container.style.display = "block";
 })
@@ -101,8 +127,12 @@ const hideModalFromWindow = (event) => {
     }
 }
 
-
+submitBtn.addEventListener("click", () =>{
+    container.style.display = "none";
+})
 
 span.addEventListener("click", hideModal)
 // Si on clique n'importe où sur la page
 window.addEventListener("click", hideModalFromWindow)
+
+
