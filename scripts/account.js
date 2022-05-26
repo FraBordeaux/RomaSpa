@@ -67,3 +67,15 @@ function selectedProductList(cart){
         <button id="pay">Régler</button>
         `;
 }
+
+let treatmentDate = document.querySelector('#treatment-date');
+let treatmentTime = document.querySelector('#treatment-timeframe');
+let treatmentCategory = document.querySelector('#treatment-category');
+let treatment = document.querySelector('#treatment');
+let resetBtn = document.querySelector('#reset');
+let submitBtn = document.querySelector('#submit');
+let container = document.querySelector(".container");
+
+submitBtn.addEventListener("click", confirmation=>{
+    container.innerHTML = "Votre demande a été bien transmises.";
+})
