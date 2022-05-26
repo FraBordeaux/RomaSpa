@@ -129,6 +129,21 @@ button a:hover{
     width: 400px;
 }
 
+/* Modal */
+/* Modal : background */
+.container {
+    display: none; /* Hidden par défaut */
+    position: fixed; /* Garder en place */
+    z-index: 1; /* Affiché par dessus */
+    top: 20px;
+    margin-left: 10px;
+    width: 45%; 
+    height: fit-content; 
+    overflow: auto; /* Active le scroll Y si besoin */
+    background-color: rgb(0,0,0); /* Couleur d'arrière-plan */
+    background-color: whitesmoke; 
+  }
+  
 .form {
     padding: 10px 20px;
 }
@@ -173,7 +188,19 @@ button a:hover{
     border-color: var(--success-color);
 }
 
-
 .form-field small {
     color: var(--error-color);
 }
+
+#hide-div {
+    animation: hideAnimation 0s ease-in 5s;
+ 
+  }
+  
+  @keyframes hideAnimation {
+    to {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+  }

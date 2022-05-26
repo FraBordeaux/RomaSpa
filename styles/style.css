@@ -8,7 +8,7 @@ header{
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 50vh;
+    height: 100vh;
 }
 
 section{
@@ -50,7 +50,7 @@ h1{
 }
 
 .treatments{
-    background-image: url("/assets/images/treatments/facial-massage-2.jpeg");
+    background-image: url("/assets/images/treatments/massage-hands.jpg");
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,7 +58,7 @@ h1{
 }
 
 .vip-treatments{
-    background-image: url("/assets/images/backgrounds/duo-massage.jpeg");
+    background-image: url("/assets/images/treatments/bath-woman-champagne.jpg");
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -66,7 +66,7 @@ h1{
 }
 
 .products{
-    background-image: url("/assets/images/products/kit-voyage.jpg");
+    background-image: url("/assets/images/products/boutique-produits.jpg");
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
