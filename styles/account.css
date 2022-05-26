@@ -13,21 +13,49 @@ main{
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 30px;
+}
+
+header{
+    background-image: url('/assets/images/backgrounds/pool-overlook-valley.jpg');
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
 }
 
 .tabs{
     margin-top: 20px;
     text-align: center;
     background-color: #B89535;
+    display: flex;
+    justify-content: space-around;
 }
 
-header{
-    background-image: url('/assets/images/treatments/women-massaged.jpg');
-    width:100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 40vh;
+.tabs button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid #B89535;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.tabs button:hover{
+    background-color: #B89535;
+    color: white;
+    border: 1px solid white;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.account-info{
+   padding-left: 15px;
+   padding-right: 15px;
 }
 
 .selected-products{
@@ -83,26 +111,6 @@ button a:hover{
     color: #B89535;
 }
 
-.tabs button{
-    background-color: transparent;
-    color: white;
-    border: 1px solid #B89535;
-    margin: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 5px;
-}
-
-.tabs button:hover{
-    background-color: #B89535;
-    color: white;
-    border: 1px solid white;
-    margin: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 5px;
-}
-
 .card{
     width: 70%;
     margin-left: auto;
@@ -113,33 +121,90 @@ button a:hover{
     column-gap: 30px;
 }
 
-.log-in{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-}
 
-input{
-    border: 1px solid #B89535;
+
+/* Modal */
+/* Modal : background */
+.container {
+    background-color: #fff;
+    padding: 1em;
     border-radius: 5px;
-    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    display: none; /* Hidden par défaut */
+    position: fixed; /* Garder en place */
+    z-index: 1; /* Affiché par dessus */
+    top: 20px;
+    margin-left: 10px;
+    width: 45%; 
+    height: fit-content; 
+    overflow: auto; /* Active le scroll Y si besoin */
+    background-color: whitesmoke; 
+}
+  
+.form {
+    padding: 10px 20px;
 }
 
-input:focus{
+.form h1 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-field {
+    margin-bottom: 5px;
+
+}
+
+.form-field label {
+    display: block;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.form-field input {
+    border: solid 2px #f0f0f0;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+
+.form-field input:focus {
     outline: none;
-    border: 2px solid #B89535;
 }
 
-.sign-up{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-    border-left: 0.5px solid gold;
-    padding-left: 30px;
+.form-field.error input {
+    border-color: var(--error-color);
 }
 
-.sign-up p{
-    font-size: 1.2em;
+.form-field.success input {
+    border-color: var(--success-color);
+}
+
+.form-field small {
+    color: var(--error-color);
+}
+
+
+
+
+.message-sent {
+  margin: 8px 0px;
+  padding: 8px;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.fade{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
 }

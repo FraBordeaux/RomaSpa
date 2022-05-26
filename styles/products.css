@@ -17,7 +17,7 @@ header{
 .special-offer{
     background-image: url("/assets/images/products/mother-day.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 700px;
     background-position: center;
     height: 300px;
 }
@@ -44,14 +44,21 @@ h4{
     width: 150px;
     display: flex;
     flex-direction: column;
-    float:right;
-    transform: translateX(48px);
+    transform: translate(0, 208px);
     text-align: center;
-    box-shadow: 2px 2px 5px palegoldenrod;
 }
 
 .card p{
     width: auto;
+}
+#card-title{
+    color: #B89535;
+    margin-bottom: 0px;
+}
+
+#card-baseline{
+    color: #004B62;
+    font-size: 0.7em;
 }
 
 .product-list{

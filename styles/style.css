@@ -1,1 +1,110 @@
-// css file for index.html
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-image: url("/assets/images/backgrounds/pool-overlook-valley-sunset.jpg");
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+section{
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.introduction{
+    width: 60%;
+    text-align: center;
+}
+
+h1{
+    color: #B89535;
+}
+
+.introduction p{
+    color: #004B62;
+}
+
+.offers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 500px;
+    padding: 20px;
+}
+
+.offers p{
+    color: #B89535;
+    float: right;
+    margin-right: 15px;
+    transform: translateY(430px);
+}
+
+.offers a{
+    text-decoration: none;
+}
+
+.treatments{
+    background-image: url("/assets/images/treatments/massage-hands.jpg");
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30%;
+}
+
+.vip-treatments{
+    background-image: url("/assets/images/treatments/bath-woman-champagne.jpg");
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30%;
+}
+
+.products{
+    background-image: url("/assets/images/products/boutique-produits.jpg");
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30%;
+}
+
+
+.gallery{
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    height: 455px; 
+}
+
+.gallery-card{
+    background-color: white;
+    padding: 12px;
+    width: 190px;
+    height: max-content;
+    position: absolute;
+    transform: translate(-189px, 244px);
+}
+
+.destinations{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    object-fit: cover;
+    height: 455px; 
+    
+}
+
+.destinations h2{
+    color: #B89535;
+}
+
+.destinations p{
+    color: white;
+    transform:  translate(57px, -64px);;
+}
+
