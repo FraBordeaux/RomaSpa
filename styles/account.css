@@ -17,7 +17,7 @@ main{
 }
 
 header{
-    background-image: url('/assets/images/treatments/women-massaged.jpg');
+    background-image: url('/assets/images/backgrounds/pool-overlook-valley.jpg');
     width:100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -121,17 +121,16 @@ button a:hover{
     column-gap: 30px;
 }
 
+
+
+/* Modal */
+/* Modal : background */
 .container {
     background-color: #fff;
     padding: 1em;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     width: 400px;
-}
-
-/* Modal */
-/* Modal : background */
-.container {
     display: none; /* Hidden par défaut */
     position: fixed; /* Garder en place */
     z-index: 1; /* Affiché par dessus */
@@ -140,9 +139,8 @@ button a:hover{
     width: 45%; 
     height: fit-content; 
     overflow: auto; /* Active le scroll Y si besoin */
-    background-color: rgb(0,0,0); /* Couleur d'arrière-plan */
     background-color: whitesmoke; 
-  }
+}
   
 .form {
     padding: 10px 20px;
@@ -152,7 +150,6 @@ button a:hover{
     font-size: 1.5em;
     text-align: center;
     margin-bottom: 20px;
-
 }
 
 .form-field {
@@ -192,15 +189,22 @@ button a:hover{
     color: var(--error-color);
 }
 
-#hide-div {
-    animation: hideAnimation 0s ease-in 5s;
- 
-  }
-  
-  @keyframes hideAnimation {
-    to {
-      visibility: hidden;
-      width: 0;
-      height: 0;
-    }
-  }
+
+
+
+.message-sent {
+  margin: 8px 0px;
+  padding: 8px;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.fade{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}

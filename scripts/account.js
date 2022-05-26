@@ -75,11 +75,12 @@ let submitBtn = document.querySelector('#submit');
 const container = document.querySelector(".container");
 const modal = document.querySelector(".myModal");
 const span = document.getElementsByClassName("close")[0];
-const messageSent = document.querySelector(".message-sent");
+let messageSent = document.querySelector(".message-sent");
 
-submitBtn.addEventListener("click", confirmation=>{
-    container.innerHTML = "Votre demande a été bien transmises.";
+submitBtn.addEventListener("click", () =>{
+    container.style.display = "none";
 })
+
 
 /**
  * ---------------------------
@@ -93,7 +94,6 @@ reserveTreatment.addEventListener("click", openModal =>{
 
 const hideModal = () => {
     container.style.display = "none";
-    messageSent.style.display = "block";
 }
 const hideModalFromWindow = (event) => {
     if (event.target == container) {
