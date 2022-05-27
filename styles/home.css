@@ -1,0 +1,37 @@
+@font-face {
+    font-family: fedra;
+    src: url("../assets/graphic-charter/fonts/FedraSansBook.ttf");
+}
+
+.container-cards, .container-offert, .scrolling-image, .carousel-wrapper {
+    width: 80%;
+    margin: auto;
+}
+
+.container-cards {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 1em;
+}
+
+.container-cards h3 {
+    letter-spacing: 8px;
+    margin-top: 8px;
+    font-size: 2em;
+    font-family: fedra;
+}
+
+.container-cards .container img {
+    border-radius: 6px;
+    width: 100%;
+}
+
+.container {
+    transition: all .2s ease-in-out;
+}
+
+.container :hover{
+    transform: scale(1.05);
+} 
+
