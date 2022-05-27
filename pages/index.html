@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/footer.css">
     <script src="/scripts/script.js" defer></script>
+    <script src="/scripts/header.js" defer></script>
     <script src="/scripts/footer.js" defer></script>
     <title> Roma Spa</title>
 </head>
@@ -47,12 +49,36 @@
             
         </section>
 
-        <section class="destinations">
+      
+
+        <!-- destinations carousel -->
+        <section name="destinations" id="carousel-container" class="carousel-container">
             <h2>Nos desinations</h2>
-            <img src="/assets/images/destinations/sous-les-oliviers.jpeg" alt="">
-            <p>Siracuse, Italie</p>
-            <!-- injecter carrousel-->
-        </section>
+
+            <div class="carousel-wrapper">
+              <div class="carousel">
+
+                <!-- images for the carousel -->
+                <a href="https://www.costanavarino.com/anazoespa/spa-treatments/#anazoe-outdoor-experience">
+                    <img class="carousel__photo initial" src="../assets/images/destinations/sous-les-oliviers.jpeg" alt="massage in a olive tree grove">
+                    <p>Siracuse, Italie</p>
+                </a>
+
+                <a href="https://www.costanavarino.com/anazoespa/spa-treatments/#anazoe-outdoor-experience">
+                    <img class="carousel__photo" src="../assets/images/destinations/sur-la-plage.jpeg" alt="massage on the beach, by the shore">
+                    <p>Mikanos, Grèce</p>
+                </a>
+
+                <!-- carousel buttons -->
+                <div class="carousel__button--next"></div>
+                <div class="carousel__button--prev"></div>
+  
+              </div>
+  
+            </div>
+  
+          </section>
+          <!-- end destinations carousel -->
 
     </main>
     
