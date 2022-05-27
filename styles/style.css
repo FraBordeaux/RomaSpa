@@ -1,1 +1,190 @@
-// css file for index.html
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-image: url("/assets/images/backgrounds/pool-overlook-valley-sunset.jpg");
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+section{
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.introduction{
+    width: 60%;
+    text-align: center;
+}
+
+h1{
+    color: #B89535;
+}
+
+.introduction p{
+    color: #004B62;
+}
+
+.offers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 500px;
+    padding: 20px;
+}
+
+.offers p{
+    background-color: white;
+    color: #B89535;
+    padding: 15px;
+    float: right;
+   
+    transform: translateY(430px);
+}
+
+.offers a{
+    text-decoration: none;
+}
+
+.treatments{
+    background-image: url("/assets/images/treatments/massage-hands.jpg");
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30%;
+}
+
+.vip-treatments{
+    background-image: url("/assets/images/treatments/bath-woman-champagne.jpg");
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30%;
+}
+
+.products{
+    background-image: url("/assets/images/products/boutique-produits.jpg");
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30%;
+}
+
+
+.gallery{
+    display: flex;
+    justify-content: center;
+    object-fit: cover;
+    height: 455px; 
+}
+
+.gallery-card{
+    background-color: white;
+    padding: 12px;
+    width: 190px;
+    height: max-content;
+    position: absolute;
+    transform: translate(-189px, 244px);
+}
+
+.destinations{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    object-fit: cover;
+    height: 455px; 
+    
+}
+
+.destinations h2{
+    color: #B89535;
+}
+
+.destinations p{
+    color: white;
+    transform:  translate(57px, -64px);;
+}
+
+
+.carousel-wrapper {
+    overflow: hidden;
+    width: 90%;
+}
+
+.carousel-wrapper * {
+    box-sizing: border-box;
+}
+
+.carousel {
+    transform-style: preserve-3d;
+}
+
+.carousel__photo {
+    opacity: 0;
+    position: absolute;
+    top:0;
+    width: 100%;
+    margin: auto;
+    padding: 1rem 4rem;
+    z-index: 100;
+    transition: transform .5s, opacity .5s, z-index .5s;
+}
+
+.carousel__photo.initial,
+.carousel__photo.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+.carousel__photo.prev,
+.carousel__photo.next {
+  z-index: 800;
+}
+.carousel__photo.prev {
+  transform: translateX(-100%); /* Move 'prev' item to the left */
+}
+.carousel__photo.next {
+  transform: translateX(100%); /* Move 'next' item to the right */
+}
+
+.carousel__button--prev,
+.carousel__button--next {
+  position: absolute;
+  top:50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #FFF;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  cursor: pointer; 
+  z-index: 1001; /* Sit on top of everything */
+  border: 1px solid black;
+}
+.carousel__button--prev {
+  left:0;
+}
+.carousel__button--next {
+  right:0;
+}
+.carousel__button--prev::after,
+.carousel__button--next::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+.carousel__button--next::after {
+  left: 47%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
