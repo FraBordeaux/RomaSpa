@@ -31,6 +31,7 @@ header{
     background-color: #B89535;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 30px;
 }
 
 .tabs button{
@@ -58,9 +59,14 @@ header{
    padding-right: 15px;
 }
 
+h2{
+    padding-bottom: 20px;
+}
+
 .selected-products{
     display: flex;
     flex-direction: column;
+    row-gap: 16px;
 }
 
 .items-in-cart{
@@ -74,6 +80,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     border-top: 1px solid gold;
+    padding-top: 12px;
 }
 
 #pay{

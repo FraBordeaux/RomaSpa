@@ -39,9 +39,11 @@ h1{
 }
 
 .offers p{
+    background-color: white;
     color: #B89535;
+    padding: 15px;
     float: right;
-    margin-right: 15px;
+   
     transform: translateY(430px);
 }
 

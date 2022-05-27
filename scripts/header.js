@@ -1,3 +1,20 @@
+const header = document.querySelector("header");
+
+header.innerHTML =
+`
+    <!-- insert logo -->
+    <img src="/assets/images/logos/logowhite.png" alt="logo Roma SPA" id = "logo_romaheader">
+
+    <!-- what does this do ? -->
+    <div id="top_head_border"></div>
+
+`;
+
+/* video en boucle. je n'ai pas reçu le fichier du video.
+    <video id="background_video" autoplay loop muted>
+        <source src="/assets/videos/background_video_header.mp4" type="video/mp4">  
+    </video>
+*/
 
 //Menu Bg
 
@@ -18,7 +35,7 @@ function toggleMenu() {
     } 
 }
 
-
+/*
 //Shoppingiconlist
 const triangle = document.querySelector('.triangleUpShoppingList')
 const divShoppingList = document.querySelector('.divShoppingList')
@@ -57,7 +74,7 @@ iconShoppingList.addEventListener("mouseleave",function(){
 },true);
 
 
-
+*/
 
 
 
