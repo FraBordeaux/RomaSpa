@@ -3,8 +3,6 @@
     src: url("/assets/graphic-charter/fonts/Fedra\ Sans\ Light.ttf");
 }
 
-  
-
 body{
     padding:0;
     margin:0;
@@ -32,7 +30,9 @@ header{
 
 h2{
     color : #B89535;
-    font-size: 2em;
+    font-size: 3em;
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 h3{
@@ -49,18 +49,19 @@ h4{
 .pricing-list, .vip-pricing-list{
     display: flex;
     flex-direction: column;
+    padding: 5px;
 }
 
-.card{
+.price-card{
     display: flex;
     flex-direction: row;
+    padding: 10px;
 }
 
 .left-side{
     display: flex;
     flex-direction: column;
     padding-right: 40px;
-    
 }
 
 .right-side{

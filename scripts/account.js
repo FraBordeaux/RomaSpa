@@ -23,6 +23,11 @@ let treatmentCategory = document.querySelector("#treatment-category");// retriev
 let treatType = document.querySelector("#treatment");// retrieve treatment dropdown menu in modal
 
 // add unique categories (no duplicates) to dropdown menu
+treatmentCategory.innerHTML =
+    `
+    <option></option>
+    `;
+
 uniqueTreatments.forEach(element =>{
     treatmentCategory.innerHTML +=
     `
@@ -36,6 +41,12 @@ function update() {
     const selectedCat = treatmentList.filter(item => item["treatmentCategory"] === option);
     console.log(selectedCat);
    
+    
+        treatType.innerHTML =
+        `
+        <option></option>
+        `;
+    
     selectedCat.forEach(element =>{
         treatType.innerHTML +=
         `

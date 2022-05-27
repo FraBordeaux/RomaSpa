@@ -58,12 +58,11 @@ const vipPricingList = document.querySelector(".vip-pricing-list");
 // add treatments to appropriate placements
 for(let i = 0 ; i < allTreatments.length ; i ++){
 
-    if (allTreatments[i].VIP){
-
-
+    if (allTreatments[i].treatmentVIP){
+    
         vipPricingList.innerHTML +=
         `
-            <div class="card">
+            <div class="price-card">
 
                 <div class="left-side">
                     <h4>${allTreatments[i].treatmentName}</h4>
@@ -83,7 +82,7 @@ for(let i = 0 ; i < allTreatments.length ; i ++){
     } else {
         pricingList.innerHTML += 
         `
-            <div class="card">
+            <div class="price-card">
             
                 <div class="left-side">
                 <h4>${allTreatments[i].treatmentName}</h4>
@@ -101,4 +100,21 @@ for(let i = 0 ; i < allTreatments.length ; i ++){
         `;
     }
 }
+
+// retrieve user signed-up
+let retrieveUserInfo = localStorage.getItem('user'); // format string
+let user = JSON.parse(retrieveUserInfo);// format objet
+
+const allReserveBtn = document.querySelectorAll('.reserve-button');
+
+allReserveBtn.forEach(element =>{
+    element.addEventListener("click", isValid =>{
+        if(user.loggedIn){
+            window.location.href = "/pages/account.html";
+        } else { 
+            window.location.href = "/pages/log-in.html";
+        }
+
+    })
+})
 
