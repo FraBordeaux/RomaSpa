@@ -16,7 +16,7 @@ class User {
     userTreatment=[];
     userFollowOrder=[];
     userHistory=[];
-    loggedIn = true;
+    loggedIn = false;
 
     constructor(firstName, lastName, addresses, email, tel, mobile, dob){
         this.userFirstName = firstName;
@@ -50,6 +50,10 @@ function registerPassword(password){
 // if false....
 userLogIn.addEventListener("click", controlLogin =>{
     if(userEmail === "francesca.nadel@gmail.com" && userPassword === "secret"){
+        let retrieveUserInfo = localStorage.getItem('user'); // format string
+        let user = JSON.parse(retrieveUserInfo);// format objet
+        user.loggedIn = true;
+        localStorage.setItem('user', JSON.stringify(user));
         window.location.href = "/pages/account.html";
     } else {console.log("login error");
         document.querySelector('#login-error').style.display = "block";}
