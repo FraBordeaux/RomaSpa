@@ -92,6 +92,10 @@ main button a{
     text-decoration: none;
 }
 
+main button a:hover, active{
+    color: #B89535;
+    text-decoration: none;
+}
 
 /* responsive design */
 
