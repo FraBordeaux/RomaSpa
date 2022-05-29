@@ -17,27 +17,36 @@
     <header></header>
 
     <main>
+        <div class="container">
+            <form id="signup" class="form">
+    
+                <div class="form-field">
+                    <label for="email">Email :</label>
+                    <input type="text" name="email" id="email" autocomplete="off">
+                    <small></small>
+                </div>
+    
+                <div class="form-field">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" name="password" id="password" autocomplete="off">
+                    <small></small>
+                </div>
+    
+    
+                <div class="form-field">
+                    <label for="confirm-password">Confirmer le mot de passe :</label>
+                    <input type="password" name="confirm-password" id="confirm-password" autocomplete="off">
+                    <small></small>
+                </div>
+    
+                <div class="form-field">
+                    <input type="submit" value="Se connecter" id="submit">
+                </div>
+            </form>
 
-        <div class="card">
-
-            <div class="log-in">
-                
-                <label for="user-email">Adresse mail</label>
-                <input type="email" name="user-email" id="user-email" oninput="registerEmail(this.value)">
-
-                <label for="user-password">Mot de passe</label>
-                <input type="password" name="user-password" id="user-password" oninput="registerPassword(this.value)">
-
-                <p id="login-error" style="display: none; font-size: 0.6em;">Erreur : mail ou mot de passe pas reconnus.</p>
-
-                <button id="login">Se Connecter</button>
-                <a href="mdp-oublie.html" style="font-size:0.7em;">Mot de passe oublié</a>
-
-            </div>
-
-            <div class="sign-up">
+            <div class="sign-up-new-user">
                 <p>Créer un compte</p>
-                <button id="signup"><a href="sign-up.html">S'inscrire</a></button>
+                <button id="sign-up-new-user"><a href="sign-up.html">S'inscrire</a></button>
             </div>
 
         </div>
