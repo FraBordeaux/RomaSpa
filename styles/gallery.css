@@ -24,17 +24,21 @@
     margin-bottom: 50px;
 }
 
+.gallery {
+    display: flex;
+}
+
 .div-container {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 .left-side {
-    width: 65%;
+    width: 60%;
 }
 
 .right-side {
-    width: 35%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
