@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
 }
-
+/*
 header{
     background-image: url("/assets/images/backgrounds/pool-overlook-valley-sunset.jpg");
     object-fit: cover;
@@ -10,7 +10,7 @@ header{
     background-repeat: no-repeat;
     height: 100vh;
 }
-
+*/
 section{
     padding: 50px;
     margin-left: auto;
@@ -20,10 +20,13 @@ section{
 .introduction{
     width: 60%;
     text-align: center;
+    background-color: white;
 }
 
 h1{
     color: #B89535;
+    padding : 20px;
+    font-size: 3em;
 }
 
 .introduction p{
@@ -43,7 +46,6 @@ h1{
     color: #B89535;
     padding: 15px;
     float: right;
-   
     transform: translateY(430px);
 }
 
@@ -68,7 +70,7 @@ h1{
 }
 
 .products{
-    background-image: url("/assets/images/products/boutique-produits.jpg");
+    background-image: url("/assets/images/products/products-index-photo.jpeg");
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;

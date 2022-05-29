@@ -19,8 +19,8 @@ header{
     width:100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    height: 70vh;
+    background-position: bottom;
+    height: 50vh;
     margin-bottom: 3em;
     box-shadow:  20px 20px 60px #d9d9d9,
     -20px -20px 60px #ffffff;
@@ -132,7 +132,7 @@ button:hover{
 /*--------------------*/
 
 .product:hover {
-    background-color: #3faba3;
+    background-color: #B89535;
     box-shadow: 0 0 1px #000;
     border-radius: 5px;
 }

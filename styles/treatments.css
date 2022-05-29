@@ -21,7 +21,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    max-height: 50vh;
 }
 
 .tabs{
@@ -29,7 +29,7 @@ header{
 }
 
 h2{
-    color : #B89535;
+    color : #dbb778;
     font-size: 3em;
     margin-bottom: 1em;
     margin-top: 1em;
