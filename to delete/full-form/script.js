@@ -1,45 +1,32 @@
-const emailEl = document.querySelector('#email'); // retrieve user email
-const passwordEl = document.querySelector('#password'); // retrieve password
-const confirmPasswordEl = document.querySelector('#confirm-password'); // retrieve confirmation password
-const form = document.querySelector('#signup'); // retrieve submit button
+const usernameEl = document.querySelector('#username');
+const emailEl = document.querySelector('#email');
+const passwordEl = document.querySelector('#password');
+const confirmPasswordEl = document.querySelector('#confirm-password');
 
-// class user
-class User {
-    userFirstName;
-    userLastName;
-    userEmail;
-    userPassword;
-    userTel;
-    userMobile;
-    userDateOfBirth;
-    userAddresses=[];
-    userCart=[];
-    userCartTotal=0;
-    userTreatment=[];
-    userFollowOrder=[];
-    userHistory=[];
-    loggedIn = false;
+const form = document.querySelector('#signup');
 
-    constructor(firstName, lastName, addresses, email, password, tel, mobile, dob){
-        this.userFirstName = firstName;
-        this.userLastName = lastName;
-        this.userAddresses = addresses;
-        this.userEmail = email;
-        this.userPassword = password
-        this.userTel = tel;
-        this.userMobile = mobile;
-        this.userDateOfBirth = dob;
+
+const checkUsername = function() {
+
+    let valid = false;
+
+    const min = 3;
+    const max = 25;
+
+    const username = usernameEl.value.trim();
+
+    if (!isRequired(username)) {
+        showError(usernameEl, "Le nom d'utilisateur ne peut pas être vide");
+    } else if (!isBetween(username.length, min, max)) {
+        showError(usernameEl, `Le nom d'utilisateur doit être compris entre ${min} et ${max} caractères.`)
+    } else {
+        showSuccess(usernameEl);
+        valid = true;
     }
+    return valid;
+};
 
-} // end of class
 
-// create user
-let userFra = new User("Francesca", "Nadel", {"domicile":"Bordeaux"}, "francesca.nadel@gmail.com", "M@tSecr3t","0622000452", "0622000452", "30/05/1977")
-
-// create user in localStorage
-localStorage.setItem('user', JSON.stringify(userFra)); 
-
-// check email entered correctly
 const checkEmail = function() {
 
     let valid = false;
@@ -57,7 +44,6 @@ const checkEmail = function() {
     return valid;
 };
 
-// check password entered correctly
 const checkPassword = function() {
 
     let valid = false;
@@ -76,7 +62,6 @@ const checkPassword = function() {
     return valid;
 };
 
-// check that confirmation password entered correctly
 const checkConfirmPassword = function() {
 
     let valid = false;
@@ -96,13 +81,11 @@ const checkConfirmPassword = function() {
     return valid;
 };
 
-// called in checkEmail function, confirms email format
 const isEmailValid = function(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 };
 
-// checks that the password format is correct
 const isPasswordSecure = function(password) {
     const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
     return re.test(password);
@@ -111,7 +94,7 @@ const isPasswordSecure = function(password) {
 const isRequired = value => value === '' ? false : true;
 const isBetween = (length, min, max) => length < min || length > max ? false : true;
 
-// displays if there is an error
+
 const showError = function(input, message) {
   
     const formField = input.parentElement;
@@ -123,7 +106,6 @@ const showError = function(input, message) {
     error.textContent = message;
 };
 
-// displays if everything is ok
 const showSuccess = function(input) {
     const formField = input.parentElement;
 
@@ -134,37 +116,26 @@ const showSuccess = function(input) {
     error.textContent = '';
 }
 
-// button se connecter
+
 form.addEventListener('submit', function (e) {
     
     e.preventDefault();
 
     // validate fields
+    let isUsernameValid = checkUsername();
     let isEmailValid = checkEmail();
     let isPasswordValid = checkPassword();
     let isConfirmPasswordValid = checkConfirmPassword();
 
-    let isFormValid = 
+    let isFormValid = isUsernameValid &&
         isEmailValid &&
         isPasswordValid &&
         isConfirmPasswordValid;
 
-    // if all entries are valid, check input
-    if (isFormValid){
-        // retrieve user info
-        let retrieveUserInfo = localStorage.getItem('user'); // format string
-        let user = JSON.parse(retrieveUserInfo);// format objet
-            // if input info matches user info, sign-in, update user logged in status and 
-            // go to user account page / else ask to sign-up
-            if(emailEl.value == user.userEmail && passwordEl.value == user.userPassword){
-                user.loggedIn = true;
-                localStorage.setItem('user', JSON.stringify(user));
-                window.location.href = "/pages/account.html";
-            } else {
-                alert("Vous n'avez pas de compte, merci de vous inscrire.");
-            }
-    }
+   // Envoyer au serveur si le formulaire est valide
+    if (isFormValid) {
 
+    }
 });
 
 
@@ -182,9 +153,11 @@ const debounce = (fn, delay = 500) => {
     };
 };
 
-// check validity of entries on input
 form.addEventListener('input', debounce(function (e) {
     switch (e.target.id) {
+        case 'username':
+            checkUsername();
+            break;
         case 'email':
             checkEmail();
             break;

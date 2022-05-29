@@ -8,6 +8,67 @@ const selectedProducts = document.querySelector(".selected-products"); // accoun
 let retrieveUserInfo = localStorage.getItem('user'); // format string
 let user = JSON.parse(retrieveUserInfo);// format objet
 
+// personalized welcome message  
+document.querySelector("h2").innerText = `Bienvenue ${user.userFirstName}!`; // welcome message
+
+// update user cart information
+function updateCart(){
+    if((user.userCart.length) === 0){
+        buttonPlaceHolder();
+    } else {
+        selectedProductList(user.userCart);
+    }
+}
+
+// update user cart when page refreshed
+updateCart();
+
+// user logging out
+userLogOut.addEventListener("click", logOut =>{
+    user.loggedIn = false;
+    localStorage.clear;
+    window.location.href = "/pages/log-in.html";
+})
+
+// if cart empty, show link to product page
+function buttonPlaceHolder(){
+    selectedProducts.innerHTML =
+    `
+    <div class="empty-cart">
+        <button id="descover-products"><a href="/pages/products.html">Découvrir nos produits</a></button>
+    </div>
+    `;
+}
+
+// if full, show list of products in cart
+function selectedProductList(cart){
+    selectedProducts.innerHTML =
+    `
+    <div class="full-cart">
+        <h3>Voici les produits dans votre panier:</h3>
+    `;
+
+    cart.forEach(item =>{
+        selectedProducts.innerHTML +=
+        `
+        <div class="items-in-cart">
+            <p>${item.name}</p>
+            <p>${item.value}€</p>
+        </div>
+        `;
+    })
+        
+    selectedProducts.innerHTML +=
+        `
+        <div class="cart-total">
+            <p>Nombre de produits dans le panier : ${cart.length} </p>
+            <p>Prix total : ${user.userCartTotal}€</p>
+        </div>
+        <button id="pay">Régler</button>
+        `;
+}
+
+
 // retrieve product list
 let getProductList = localStorage.getItem('products'); // format string
 let productList = JSON.parse(getProductList);// format objet
@@ -57,67 +118,6 @@ function update() {
 
 
 
-
-
-
-// user logged in 
-document.querySelector("h2").innerText = `Bienvenue ${user.userFirstName}!`; // welcome message
-
-function updateCart(){
-    if((user.userCart.length) === 0){
-        buttonPlaceHolder();
-    } else {
-        selectedProductList(user.userCart);
-    }
-}// end updateCart function
-
-// update user cart when page refreshed
-updateCart();
-
-// user logged out
-userLogOut.addEventListener("click", logOut =>{
-    user.loggedIn = false;
-    localStorage.clear;
-    window.location.href = "/pages/log-in.html";
-})
-
-// if cart empty, show link to product page
-function buttonPlaceHolder(){
-    selectedProducts.innerHTML =
-    `
-    <div class="empty-cart">
-        <button id="descover-products"><a href="/pages/products.html">Découvrir nos produits</a></button>
-    </div>
-    `;
-}
-
-// if full, show list of products in cart
-function selectedProductList(cart){
-    selectedProducts.innerHTML =
-    `
-    <div class="full-cart">
-        <h3>Voici les produits dans votre panier:</h3>
-    `;
-
-    cart.forEach(item =>{
-        selectedProducts.innerHTML +=
-        `
-        <div class="items-in-cart">
-            <p>${item.name}</p>
-            <p>${item.value}€</p>
-        </div>
-        `;
-    })
-        
-    selectedProducts.innerHTML +=
-        `
-        <div class="cart-total">
-            <p>Nombre de produits dans le panier : ${cart.length} </p>
-            <p>Prix total : ${user.userCartTotal}€</p>
-        </div>
-        <button id="pay">Régler</button>
-        `;
-}
 
 let treatmentDate = document.querySelector('#treatment-date');
 let treatmentTime = document.querySelector('#treatment-timeframe');

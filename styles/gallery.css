@@ -1,1 +1,68 @@
+@font-face {
+    font-family: fedra;
+    src: url("../assets/graphic-charter/fonts/FedraSansBook.ttf");
+}
 
+* {
+    font-family: fedra;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-gallery {
+    width: 90%;
+    margin: auto;
+}
+
+.title-gallery {
+    width: 70%;
+    text-align: center;
+    line-height: 1.3em;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.gallery {
+    display: flex;
+}
+
+.div-container {
+    display: flex;
+    margin-bottom: 70px;
+}
+
+.left-side {
+    width: 60%;
+}
+
+.right-side {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #dbb778;
+}
+
+.right-side h3 {
+    color: #4a4a49;
+    font-size: 1.5em;
+    width: 80%;
+    border-bottom: 1px solid #4a4a49;
+    padding-bottom: 1em;
+}
+
+.right-side p {
+    width: 80%;
+    line-height: 1.5em;
+    text-align: left;
+    padding-top: 1em;
+}
+
+.left-side img {
+    height: 100%;
+    width: 100%;
+}
