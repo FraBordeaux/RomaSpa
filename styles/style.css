@@ -4,7 +4,7 @@ body{
 }
 /*
 header{
-    background-image: url("/assets/images/backgrounds/pool-overlook-valley-sunset.jpg");
+    background-image: url("../assets/images/backgrounds/pool-overlook-valley-sunset.jpg");
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,7 +23,7 @@ section{
     background-color: white;
 }
 
-h1{
+h2{
     color: #B89535;
     padding : 20px;
     font-size: 3em;
@@ -54,7 +54,7 @@ h1{
 }
 
 .treatments{
-    background-image: url("/assets/images/treatments/massage-hands.jpg");
+    background-image: url("../assets/images/treatments/massage-hands.jpg");
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -62,7 +62,7 @@ h1{
 }
 
 .vip-treatments{
-    background-image: url("/assets/images/treatments/bath-woman-champagne.jpg");
+    background-image: url("../assets/images/treatments/bath-woman-champagne.jpg");
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -70,7 +70,7 @@ h1{
 }
 
 .products{
-    background-image: url("/assets/images/products/products-index-photo.jpeg");
+    background-image: url("../assets/images/products/products-index-photo.jpeg");
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;

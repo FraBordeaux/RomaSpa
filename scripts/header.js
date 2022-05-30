@@ -1,14 +1,15 @@
-
-//menu html
+//hamburger menu - side bar, push html
 
 document.querySelector('header').innerHTML = 
         `
+        <!-- 3 lines of hamburger menu -->
         <div class="header_mobile" onclick="toggleMenu()">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </div>
 
+        <!-- side bar closing X -->
         <nav class="nav-mobile">
             <div class="nav-mobile_close" onclick="toggleMenu()">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -16,6 +17,7 @@ document.querySelector('header').innerHTML =
                 </svg>
             </div>
             
+            <!-- side bar menu list -->
             <div class="menu_a">
                 <ul class="nav-mobile_menu">
                     <li><a href="../pages/index.html">Accueil</a></li>
@@ -27,31 +29,28 @@ document.querySelector('header').innerHTML =
             </div>
         </nav> 
             
+        <!-- makes closing x disappear -->
         <div class="mobile-overlay" onclick="toggleMenu()"></div>
 
         <!--logo-->
-
         <div id = "div_logo_romaheader">
             <img src="../assets/images/logos/logowhite.png" alt="logo Roma SPA" id="logo_romaheader">
             
-            <!--ligne sous le logo-->
+            <!--line under the logo-->
             <div id="div_border_line" ></div>
         </div>
 
-        <!--icons-->
+        <!-- user icon -->
         <div class = "icon_header">
             <input type="image" src="../assets/images/icons/user_profil.png" id="user_profil">
 
-        <!--shoppingList-->
+        <!-- cart icon -->
             <input type="image" src="../assets/images/icons/buy_list.png" class="buy_list">
             <div class="triangleUpShoppingList"></div>
             <div class="divShoppingList"><p id="productsSelected"></p></div>    
         </div>
 
-        
-        <!--video background-->
-        <img src="../assets/images/backgrounds/background-header.jpg" alt="salle de reception" id="background_image">
-
+        <!-- page title -->
         <div class="title-header">
             <h1>Spa ROMA</h1>
             <h2>Spa de Luxe</h2>
@@ -59,7 +58,7 @@ document.querySelector('header').innerHTML =
       
 `;
 
-//Menu Bg
+//Menu Burger
 function toggleMenu() {
     const navMobile = document.querySelector('.nav-mobile');
     const mobileOverlay = document.querySelector('.mobile-overlay');  
@@ -82,7 +81,10 @@ const divShoppingList = document.querySelector('.divShoppingList')
 const iconShoppingList = document.querySelector('.buy_list')
 const productsSelected = document.querySelector('#productsSelected')
 
+// mouse over cart icon
 iconShoppingList.addEventListener("mouseover",function(){
+    
+    // triangle that points to cart icon from dropdown div
     triangle.style.cssText = ` width: 0;
     position:absolute;
     margin-top: 44px;
@@ -92,6 +94,7 @@ iconShoppingList.addEventListener("mouseover",function(){
     border-right: 20px solid transparent;
     border-bottom: 35px solid white;`
     
+    // rectangle containing cart items
     divShoppingList.style.cssText =`width :250px;
     margin-top: 71px;
     height: 200px;
@@ -103,6 +106,7 @@ iconShoppingList.addEventListener("mouseover",function(){
     align-items: center;`
 },true);
 
+// mouse leaves cart icon
 iconShoppingList.addEventListener("mouseleave",function(){
     triangle.style.cssText = `none`
     divShoppingList.style.cssText =`none`
