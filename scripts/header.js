@@ -48,10 +48,9 @@ document.querySelector('header').innerHTML =
         <div class = "icon_header">
             <input type="image" src="../assets/images/icons/user_profil.png" id="user_profil">
 
-        <!-- cart icon -->
+            <!-- cart icon -->
             <input type="image" src="../assets/images/icons/buy_list.png" class="buy_list">
-            <div class="triangleUpShoppingList"></div>
-            <div class="divShoppingList"><p id="productsSelected"></p></div>    
+            <div class="divShoppingList exit"><p id="productsSelected"></p></div>    
         </div>
 
         </div> <!-- end header top -->
@@ -83,63 +82,140 @@ function toggleMenu() {
     } 
 }
 
+// user profile icon
+const iconUserProfile = document.querySelector("#user_profil");
+
 //Shoppingiconlist
-const triangle = document.querySelector('.triangleUpShoppingList')
-const divShoppingList = document.querySelector('.divShoppingList')
-const iconShoppingList = document.querySelector('.buy_list')
-const productsSelected = document.querySelector('#productsSelected')
-
-// mouse over cart icon
-iconShoppingList.addEventListener("mouseover",function(){
-    
-    // triangle that points to cart icon from dropdown div
-    triangle.style.cssText = ` width: 0;
-    position:absolute;
-    margin-top: 44px;
-    margin-left:107px;
-    height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-bottom: 35px solid white;`
-    
-    // rectangle containing cart items
-    divShoppingList.style.cssText =`width :250px;
-    margin-top: 71px;
-    height: 200px;
-    margin-left: -89px;
-    background-color: white;
-    border-radius: 10px;
-    position: absolute;
-    display: flex;
-    align-items: center;`
-},true);
-
-// mouse leaves cart icon
-iconShoppingList.addEventListener("mouseleave",function(){
-    triangle.style.cssText = `none`
-    divShoppingList.style.cssText =`none`
-},true);
+const divShoppingList = document.querySelector('.divShoppingList'); // rectangle
+const iconShoppingList = document.querySelector('.buy_list'); // cart icon
+const exitDiv = document.createElement("div"); // create transparent div to exit cart
+const exitSpace = document.querySelector(".icon_header"); // apply exitDiv here
 
 // retrieve user signed-up
 let retrieveUserInfo = localStorage.getItem('user'); // format string
 let user = JSON.parse(retrieveUserInfo);// format objet
 
+exitSpace.appendChild(exitDiv);
+exitDiv.classList.add("exit-div");
+    
 
-// COMPTE COMPTE COMPTE
-// if user logged in, icon leads to account page
-// else it leads to login page
+// when user clicks on user profile icon, if logged in => account
+// else => log in page
+iconUserProfile.addEventListener("click", isValid =>{
+    if(user.loggedIn){
+        window.location.href = "../pages/account.html";
+    } else { 
+        window.location.href = "../pages/log-in.html";
+    }
+})
+
+let show = [];
+
+// mouse over cart icon
+iconShoppingList.addEventListener("mouseover",function(){
+    
+    divShoppingList.classList.add("show");
+    exitDiv.classList.add("show");
+
+    // rectangle containing cart items
+    divShoppingList.style.cssText =
+    `
+    display:block;
+    margin-left:-160px;
+    `;
+
+    exitDiv.style.cssText = 
+    `
+    display:block;
+    `;
+        
+    show = document.querySelectorAll(".show");
+    leave();
+
+},true);
+
+function leave(){
+show.forEach(element =>{
+    element.addEventListener("mouseleave",function(){
+         element.style.cssText = "none";  
+         element.classList.remove("show");
+    });  
+})
+}
+
+iconShoppingList.addEventListener("mouseover", isValid =>{
+    if(user.loggedIn){
+        updateCart();
+    } else { 
+        notLoggedIn();
+    }
+})
+  
+// update user cart information
+function notLoggedIn(){
+    divShoppingList.innerHTML = 
+        `
+        <a href="../pages/log-in.html">
+        <button class="not-logged-in">Se connecter</button>
+        </a>
+        `
+        ;       
+}
+
+// update user cart information
+function updateCart(){
+    divShoppingList.innerHTML = 
+        `
+        <h2> Bienvenue ${user.userFirstName}! </h2>
+        `
+        ;
+        
+    if((user.userCart.length) === 0){
+        emptyCart();
+    } else {
+        selectedProductList(user.userCart);
+    }
+}
+
+// if cart empty, show link to product page
+function emptyCart(){
+    divShoppingList.innerHTML +=
+    `
+    <div class="empty-cart">
+        <p>Votre panier est vide.</p>
+    </div>
+    `;
+}
+
+// if full, show list of products in cart
+function selectedProductList(cart){
+    divShoppingList.innerHTML +=
+    `
+    <div class="full-cart">
+        <h3>Voici les produits dans votre panier:</h3>
+    `;
+
+    cart.forEach(item =>{
+        divShoppingList.innerHTML +=
+        `
+        <div class="items-in-cart">
+            <p>${item.name}</p>
+            <p>${item.value}€</p>
+        </div>
+        `;
+    })
+        
+    divShoppingList.innerHTML +=
+        `
+        <div class="cart-total">
+            <p>Prix total : ${user.userCartTotal}€</p>
+            <button id="pay">Régler</button>
+        </div>
+        `;
+}
 
 
-// PANIER PANIER PANIER
-// if user logged in : personalized welcome message  
-divShoppingList.innerText = 
-`
-Bienvenue ${user.userFirstName}!
-`
-;
-    // if cart empty, display "panier vide"
-    // else display items in cart.
-    // use functions on account js page
-
-// else se connecter button that leads to login page
-
+// retrieve product list
+let getProductList = localStorage.getItem('products'); // format string
+let productList = JSON.parse(getProductList);// format objet
+const uniqueProducts = [...new Map(productList.map(item => [item.id, item])).values()]// remove duplicates

@@ -228,3 +228,99 @@ svg:hover {
 }
 
 /*------------shoppingList-------------*/
+
+.not-logged-in {
+    background-color: transparent;
+    color: #B89535;
+    border: 1px solid #B89535;
+    margin: 0;
+    padding: 5px;
+}
+
+.not-logged-in :hover{
+    background-color: #B89535;
+    color: white;
+    border: 1px solid white;
+    margin: 0;
+    padding: 5px;
+}
+
+.divShoppingList{
+    width: max-content;
+    height: max-content;
+    padding: 40px;
+    margin-top: 71px;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+.divShoppingList h2{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.divShoppingList h3{
+    font-weight: normal;
+    font-size: 15px;
+    padding-bottom: 5px;
+}
+
+.divShoppingList p{
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.full-cart{
+    display: flex;
+    flex-direction: column;
+    column-gap: 5px;
+}
+
+.items-in-cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart-total{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.cart-total p{
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#pay{
+    background-color: transparent;
+    color: #B89535;
+    border: 1px solid #B89535;
+    margin: 0;
+    padding: 5px;
+    float: right;
+}
+
+#pay:hover{
+    background-color: #B89535;
+    color: white;
+    border: 1px solid white;
+    margin: 0;
+    padding: 5px;
+    float:right;
+}
+
+.exit-div{
+    position:absolute;
+    width: 72%;
+    margin-left: -161px;
+    width: 40%;
+    height: 50%;
+    display:none;
+}
