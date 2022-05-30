@@ -9,7 +9,7 @@ footer.innerHTML =
 
     <!--footer top left : contact info-->
     <div class="left-contact-info">
-        <a href="/pages/index.html"><p> <strong> Roma Spa </strong> </p> </a>
+        <a href="../pages/index.html"><p> <strong> Roma Spa </strong> </p> </a>
         <p>Bahnhofplatz 18</p>
         <p>3920 Zermatt - Switzerland</p>
         <p></p><a href="tel:+41279664500">+41 27 966 45 00</a></p>
@@ -18,7 +18,7 @@ footer.innerHTML =
 
     <!--footer top right : links-->
     <div class="right-links">
-        <a href="contact.html">Contact</a>
+        <a href="../pages/contact.html">Contact</a>
         <a href="press.html">Presse</a>
         <a href="careers.html">Carrières</a>
         <a href="team.html">Equipe</a>

@@ -18,11 +18,11 @@ document.querySelector('header').innerHTML =
             
             <div class="menu_a">
                 <ul class="nav-mobile_menu">
-                    <li><a href="/pages/index.html">Accueil</a></li>
-                    <li><a href="/pages/treatments.html">Soins</a></li>
-                    <li><a href="/pages/products.html">Produits</a></li>
-                    <li><a href="/pages/gallery.html">Galerie</a></li>
-                    <li><a href="/pages/contact.html">Contact</a></li>
+                    <li><a href="../pages/index.html">Accueil</a></li>
+                    <li><a href="../pages/treatments.html">Soins</a></li>
+                    <li><a href="../pages/products.html">Produits</a></li>
+                    <li><a href="../pages/gallery.html">Galerie</a></li>
+                    <li><a href="../pages/contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav> 

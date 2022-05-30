@@ -110,9 +110,9 @@ const allReserveBtn = document.querySelectorAll('.reserve-button');
 allReserveBtn.forEach(element =>{
     element.addEventListener("click", isValid =>{
         if(user.loggedIn){
-            window.location.href = "/pages/account.html";
+            window.location.href = "../pages/account.html";
         } else { 
-            window.location.href = "/pages/log-in.html";
+            window.location.href = "../pages/log-in.html";
         }
 
     })

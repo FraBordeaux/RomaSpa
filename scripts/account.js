@@ -27,7 +27,7 @@ updateCart();
 userLogOut.addEventListener("click", logOut =>{
     user.loggedIn = false;
     localStorage.clear;
-    window.location.href = "/pages/log-in.html";
+    window.location.href = "../pages/log-in.html";
 })
 
 // if cart empty, show link to product page
@@ -35,7 +35,7 @@ function buttonPlaceHolder(){
     selectedProducts.innerHTML =
     `
     <div class="empty-cart">
-        <button id="descover-products"><a href="/pages/products.html">Découvrir nos produits</a></button>
+        <button id="descover-products"><a href="../pages/products.html">Découvrir nos produits</a></button>
     </div>
     `;
 }
