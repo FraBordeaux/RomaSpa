@@ -16,6 +16,8 @@ section{
     width: 60%;
     text-align: center;
     background-color: white;
+    padding-top: 90px;
+    padding-bottom: 90px;
     }
 .introduction h2{
     color: #B89535;
@@ -32,15 +34,17 @@ section{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 500px;
-    padding: 20px;
+    height: 600px;
+    padding: 30px;
+    padding-bottom: 60px;
     }
 .offers p{
     background-color: #B89535;
     color: white;
     padding: 15px;
     float: right;
-    transform: translateY(430px);
+    transform: translateY(450px);
+    text-align: right;
     }
 .offers a{
     text-decoration: none;
@@ -52,7 +56,7 @@ section{
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 30%;
+    width: 28%;
 }
 
 /* link towards vip treatments */
@@ -61,7 +65,7 @@ section{
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 30%;
+    width: 28%;
 }
 
 /* link towards products */
@@ -70,36 +74,74 @@ section{
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 30%;
+    width: 28%;
 }
 
 /* section: gallery */
 .gallery{
-    display: flex;
-    justify-content: center;
-    object-fit: cover;
     height: 455px; 
     }
 .gallery-card{
     background-color: white;
-    padding: 12px;
-    width: 190px;
+    padding: 50px;
+    padding-left: 50px;
+    width: 500px;
     height: max-content;
     position: absolute;
-    transform: translate(-189px, 244px);
+}
+.parallax {
+    background-image: url('../assets/images/backgrounds/lounge-view-pool-mountains.jpg');
+    height: 100%; 
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.gallery h2{
+    color: #B89535;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+.gallery p{
+    line-height: 1.5em;
+    color: #004B62;
+}
+.gallery button{
+    background-color: transparent;
+    color: #B89535;
+    border: 1px solid #B89535;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.gallery button:hover{
+    background-color: #B89535;
+    color: white;
+    border: 1px solid white;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
 }
 
 /* section: destinations*/
 .destinations{
     display: flex;
     flex-direction: column;
+    margin-top: 500px;
     }
 .destinations h2{
     color: #B89535;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
     }
 .destinations p{
     color: white;
-    transform:  translate(57px, -64px);;
+    transform:  translate(57px, -64px);
+    line-height: 1.5em;
 }
 
 /* section: destinations >> carrousel */
