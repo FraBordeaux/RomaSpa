@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/log-in.css">
-    <link rel="stylesheet" href="/styles/header.css">
-    <link rel="stylesheet" href="/styles/footer.css">
-    <script src="/scripts/log-in.js" defer></script>
-    <script src="/scripts/header.js" defer></script>
-    <script src="/scripts/footer.js" defer></script>
+    <link rel="stylesheet" href="../styles/log-in.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <script src="../scripts/log-in.js" defer></script>
+    <script src="../scripts/header.js" defer></script>
+    <script src="../scripts/footer.js" defer></script>
     <title>Roma | Log-in</title>
 </head>
 <body>
@@ -17,27 +17,29 @@
     <header></header>
 
     <main>
+        <div class="container">
+            <form id="signup" class="form">
+    
+                <div class="form-field">
+                    <label for="email">Email :</label>
+                    <input type="text" name="email" id="email" autocomplete="off">
+                    <small></small>
+                </div>
+    
+                <div class="form-field">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" name="password" id="password" autocomplete="off">
+                    <small></small>
+                </div>
+    
+                <div class="form-field">
+                    <input type="submit" value="Se connecter" id="submit">
+                </div>
+            </form>
 
-        <div class="card">
-
-            <div class="log-in">
-                
-                <label for="user-email">Adresse mail</label>
-                <input type="email" name="user-email" id="user-email" oninput="registerEmail(this.value)">
-
-                <label for="user-password">Mot de passe</label>
-                <input type="password" name="user-password" id="user-password" oninput="registerPassword(this.value)">
-
-                <p id="login-error" style="display: none; font-size: 0.6em;">Erreur : mail ou mot de passe pas reconnus.</p>
-
-                <button id="login">Se Connecter</button>
-                <a href="mdp-oublie.html" style="font-size:0.7em;">Mot de passe oublié</a>
-
-            </div>
-
-            <div class="sign-up">
+            <div class="sign-up-new-user">
                 <p>Créer un compte</p>
-                <button id="signup"><a href="sign-up.html">S'inscrire</a></button>
+                <button id="sign-up-new-user"><a href="../pages/log-in.html">S'inscrire</a></button>
             </div>
 
         </div>
