@@ -48,45 +48,39 @@ main{
 }
 
 header{
-    background-image: url('../assets/images/treatments/product-image-head.jpg');
+    background-image: linear-gradient(180deg,rgba(5,20,1,0.6) 0%,rgba(5,20,1,0.6) 100%), url('../assets/images/backgrounds/elegant-bath-time.jpeg');
     width:100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom;
-    height: 50vh;
+    background-position: center;
+    height: 60vh;
     margin-bottom: 3em;
-    box-shadow:  20px 20px 60px #d9d9d9,
-    -20px -20px 60px #ffffff;
-    box-shadow:  17px 17px 59px #b8b8b8,
-    -17px -17px 59px #ffffff;
-    
 }
 
 .special-offer{
     display: flex;
     justify-content: center;
     margin: 5em 0 5em 0;
-    
+}
+.special-offer img{
+    width: 60%;
 }
 
-.motherday{
-    width : 100%;
-    border: 5px solid #f3dcde;
-    border-radius: 5px;
-    box-shadow:  20px 20px 60px #d9d9d9,
-             -20px -20px 60px #ffffff;
+h2{
+    color : white;
+    font-size: 500%;
+    font-family: "Roboto Bold";
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
-
-
 
 h3{
-    padding: 0.3em;
+    color : white;
+    background-color: #B89535;
+    padding: 2%;
+    font-family: "Roboto Medium";
+    font-size: 2em;
     text-align: center;
-    font-family: fedra;
-    font-size: 30px;
-    color: #B89535;
-    margin: 0;
-    margin-bottom: 20px;
 }
 
 h4{
@@ -95,21 +89,14 @@ h4{
     margin: 0;
     margin-top:4em;
     color: rgb(0, 0, 0);
-    font-family: fedra;
+
 }
 
-.card{
-    background-color: white;
-    width: 150px;
+.fathers-day{
     display: flex;
     flex-direction: column;
-    float:right;
-    transform: translateX(48px);
-    width: 100%;
-}
-
-.card p{
-    width: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .product-list{

@@ -64,8 +64,9 @@ header{
 }
 
 h2{
-    color : #dbb778;
+    color : white;
     font-size: 500%;
+    font-family: "Roboto Bold";
     margin-bottom: 1em;
     margin-top: 1em;
 }
@@ -74,6 +75,8 @@ h3{
     color : white;
     background-color: #004B62;
     padding: 2%;
+    font-family: "Roboto Medium";
+    font-size: 2em;
 }
 
 a{
@@ -104,6 +107,10 @@ h4{
     padding-right: 40px;
 }
 
+.left-side p{
+    font-family: "Roboto Thin Italic";
+}
+
 .right-side{
     display: flex;
     flex-direction: row;
@@ -113,6 +120,7 @@ h4{
 
 .right-side p{
     min-width: 65px;
+    
 }
 
 button{
