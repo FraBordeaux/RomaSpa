@@ -1,7 +1,44 @@
-/* body */
+@font-face {
+    font-family: "Roboto Regular";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Medium";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Bold";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Italic";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-Italic.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Medium Italic";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-MediumItalic.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Thin";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-Thin.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Thin Italic";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-ThinItalic.ttf");
+}
+
+
 body{
-    margin: 0;
-    padding: 0;
+    padding:0;
+    margin:0;
+    font-family: "Roboto Regular";
+    font-size: 15px;
 }
 
 /* sections */
@@ -149,6 +186,7 @@ section{
     overflow: hidden;
     width: 90%;
     display: flex;
+    justify-content: center;
 }
 
 .carousel-wrapper *{
@@ -160,6 +198,8 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 98%;
+    padding: 0px;
 }
 
 .carousel__photo{

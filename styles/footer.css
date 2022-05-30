@@ -1,3 +1,46 @@
+@font-face {
+    font-family: "Roboto Regular";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Medium";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Bold";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Italic";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-Italic.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Medium Italic";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-MediumItalic.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Thin";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-Thin.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Thin Italic";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-ThinItalic.ttf");
+}
+
+
+body{
+    padding:0;
+    margin:0;
+    font-family: "Roboto Regular";
+    font-size: 15px;
+}
+
 footer{
     width: 80%;
     min-width: 380px;

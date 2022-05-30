@@ -1,12 +1,44 @@
 @font-face {
-    font-family: "Fedra";
-    src: url("/assets/graphic-charter/fonts/Fedra\ Sans\ Light.ttf");
+    font-family: "Roboto Regular";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-Regular.ttf");
 }
+
+@font-face {
+    font-family: "Roboto Medium";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Bold";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Italic";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-Italic.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Medium Italic";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-MediumItalic.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Thin";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-Thin.ttf");
+}
+
+@font-face {
+    font-family: "Roboto Thin Italic";
+    src: url("/assets/graphic-charter/fonts/RobotoSerif_28pt-ThinItalic.ttf");
+}
+
 
 body{
     padding:0;
     margin:0;
-    font-family: "Fedra Book";
+    font-family: "Roboto Regular";
+    font-size: 15px;
 }
 
 main{
@@ -16,7 +48,7 @@ main{
 }
 
 header{
-    background-image: url('/assets/images/treatments/facial-massage.png') !important;
+    background-image: linear-gradient(180deg,rgba(5,20,1,0.6) 0%,rgba(5,20,1,0.6) 100%),url('/assets/images/treatments/facial-massage.png') !important;
     display : flex;
     flex-direction: column;
     width:100%;
@@ -24,6 +56,7 @@ header{
     background-size: cover;
     background-position: center;
     max-height: 50vh;
+    margin-bottom: 5%;
 }
 
 .tabs{
@@ -32,7 +65,7 @@ header{
 
 h2{
     color : #dbb778;
-    font-size: 3em;
+    font-size: 500%;
     margin-bottom: 1em;
     margin-top: 1em;
 }
@@ -40,7 +73,7 @@ h2{
 h3{
     color : white;
     background-color: #004B62;
-    padding: 0.3em;
+    padding: 2%;
 }
 
 a{
@@ -61,6 +94,7 @@ h4{
 .price-card{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 10px;
 }
 
