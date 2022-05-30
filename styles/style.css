@@ -96,6 +96,10 @@ section{
     width: 28%;
 }
 
+.treatments:hover{
+    transform: scale(1.1);
+}
+
 /* link towards vip treatments */
 .vip-treatments{
     background-image: url("../assets/images/treatments/bath-woman-champagne.jpg");
