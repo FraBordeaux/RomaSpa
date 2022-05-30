@@ -3,8 +3,6 @@
     src: url("/assets/graphic-charter/fonts/Fedra\ Sans\ Light.ttf");
 }
 
-  
-
 body{
     padding:0;
     margin:0;
@@ -18,23 +16,35 @@ main{
 }
 
 header{
-    background-image: url('/assets/images/treatments/facial-massage.png');
+    background-image: url('/assets/images/treatments/facial-massage.png') !important;
+    display : flex;
+    flex-direction: column;
     width:100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    max-height: 50vh;
+}
+
+.tabs{
+    margin: 10px 20px;
 }
 
 h2{
-    color : #B89535;
-    font-size: 2em;
+    color : #dbb778;
+    font-size: 3em;
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 h3{
     color : white;
     background-color: #004B62;
     padding: 0.3em;
+}
+
+a{
+    text-decoration: none;
 }
 
 h4{
@@ -45,18 +55,19 @@ h4{
 .pricing-list, .vip-pricing-list{
     display: flex;
     flex-direction: column;
+    padding: 5px;
 }
 
-.card{
+.price-card{
     display: flex;
     flex-direction: row;
+    padding: 10px;
 }
 
 .left-side{
     display: flex;
     flex-direction: column;
     padding-right: 40px;
-    
 }
 
 .right-side{

@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "fedra";
+    src: url(../assets/graphic-charter/fonts/Fedra\ Sans\ Book.ttf);
+}
+
+*{
+    margin:0;
+    padding:0;
+}
 
 main{
     width: 70%;
@@ -6,35 +15,54 @@ main{
 }
 
 header{
-    background-image: url('/assets/images/treatments/facial-massage.png');
+    background-image: url('../assets/images/treatments/product-image-head.jpg');
     width:100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    height: 70vh;
+    background-position: bottom;
+    height: 50vh;
+    margin-bottom: 3em;
+    box-shadow:  20px 20px 60px #d9d9d9,
+    -20px -20px 60px #ffffff;
+    box-shadow:  17px 17px 59px #b8b8b8,
+    -17px -17px 59px #ffffff;
+    
 }
 
 .special-offer{
-    background-image: url("/assets/images/products/mother-day.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 500px;
+    display: flex;
+    justify-content: center;
+    margin: 5em 0 5em 0;
+    
 }
 
-h2{
-    color : #B89535;
+.motherday{
+    width : 100%;
+    border: 5px solid #f3dcde;
+    border-radius: 5px;
+    box-shadow:  20px 20px 60px #d9d9d9,
+             -20px -20px 60px #ffffff;
 }
+
+
 
 h3{
-    color : white;
-    background-color: #004B62;
     padding: 0.3em;
+    text-align: center;
+    font-family: fedra;
+    font-size: 30px;
+    color: #B89535;
+    margin: 0;
+    margin-bottom: 20px;
 }
 
 h4{
-    padding: 0;
+    font-size: 15px;
+    padding: 3px;
     margin: 0;
+    margin-top:4em;
+    color: rgb(0, 0, 0);
+    font-family: fedra;
 }
 
 .card{
@@ -42,27 +70,99 @@ h4{
     width: 150px;
     display: flex;
     flex-direction: column;
-    transform: translateY(150px);
+    float:right;
+    transform: translateX(48px);
+    width: 100%;
+}
+
+.card p{
+    width: auto;
 }
 
 .product-list{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    justify-content: space-evenly;
 }
 
 .product-list img{
-    width: 240px;
+    width: 247px;
     object-fit: contain;
 }
 
 .product-list div{
-    width: 240px;
+    width: 247px;
+    padding: 12px;
+    text-align: center;
+    font-size: 0.8em;
+  
 }
 
 button{
     background-color: transparent;
     color: #B89535;
-    border: 1px solid #B89535;
     margin: 0;
+    margin-top: 40px;
+    margin-bottom: 10px;
     padding: 5px;
+    border: 1px solid #B89535;
+}
+
+button:hover{
+    background-color: #B89535;
+    color: white;
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #B89535;
+}
+
+.productDescription{
+    font-family: fedra;
+    font-size: 15px;
+}
+
+.product-select{
+    margin-bottom : 10em;
+}
+
+/*--------------------*/
+
+.product:hover {
+    background-color: #B89535;
+    box-shadow: 0 0 1px #000;
+    border-radius: 5px;
+}
+
+.product:hover img{
+    opacity:10%;
+}
+
+.divDescription{
+    position: absolute;
+    margin-top: -140px;
+    margin-left: -10px;;
+    opacity: 0;
+}
+
+.product:hover .divDescription {
+    transform: translateY(0px);
+    transition-delay: 0.1s;
+    opacity: 1;
+    font-family: fedra;
+    font-size: 12px;
+    animation: divDescription 1s;
+}
+
+@keyframes divDescription{
+    from {
+        transform : translateY(20px);
+        opacity: 0%;
+    } to {
+        transform: translateY(0);
+        opacity: 100%;
+    }
 }

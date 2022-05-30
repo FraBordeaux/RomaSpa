@@ -9,7 +9,7 @@ footer.innerHTML =
 
     <!--footer top left : contact info-->
     <div class="left-contact-info">
-        <p> <strong> Roma Spa </strong> </p>
+        <a href="../pages/index.html"><p> <strong> Roma Spa </strong> </p> </a>
         <p>Bahnhofplatz 18</p>
         <p>3920 Zermatt - Switzerland</p>
         <p></p><a href="tel:+41279664500">+41 27 966 45 00</a></p>
@@ -18,7 +18,7 @@ footer.innerHTML =
 
     <!--footer top right : links-->
     <div class="right-links">
-        <a href="contact.html">Contact</a>
+        <a href="../pages/contact.html">Contact</a>
         <a href="press.html">Presse</a>
         <a href="careers.html">Carrières</a>
         <a href="team.html">Equipe</a>
@@ -27,9 +27,13 @@ footer.innerHTML =
 
     <!--footer : social networks -->
     <div class="social-networks">
-        <img src="../assets/images/icons/facebook.png" alt="facebook icon" style="width: 38px;">
-        <img src="../assets/images/icons/insta-linkedin.png" alt="instagram and linkedin icons">
-        <img src="../assets/images/icons/twitter-pinterest.png" alt="twitter and pinterest icons">
+
+    <a href="https://fr-fr.facebook.com/"><img src="../assets/images/icons/facebook.png" alt="facebook icon" style="width: 38px;"></a>
+    <a href="https://www.instagram.com/?hl=fr"><img src="../assets/images/icons/insta.png" alt="instagram icon"></a>
+    <a href="https://www.linkedin.com/"><img src="../assets/images/icons/linkedin.png" alt="linkedin icon"></a>
+    <a href="https://twitter.com/?lang=fr"><img src="../assets/images/icons/twitter.png" alt="twitter icon" style="width: 37px;"></a>
+    <a href="https://www.pinterest.fr/"><img src="../assets/images/icons/pinterest.png" alt="pinterest icon" style="width: 36px;"></a>
+        
     </div>
 
     <!--footer : small print bottom of page -->
