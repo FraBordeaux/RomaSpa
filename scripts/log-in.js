@@ -76,25 +76,6 @@ const checkPassword = function() {
     return valid;
 };
 
-// check that confirmation password entered correctly
-const checkConfirmPassword = function() {
-
-    let valid = false;
-
-    const confirmPassword = confirmPasswordEl.value.trim();
-    const password = passwordEl.value.trim();
-
-    if (!isRequired(confirmPassword)) {
-        showError(confirmPasswordEl, "Merci d'écrire le mot de passe à nouveau");
-    } else if (password !== confirmPassword) {
-        showError(confirmPasswordEl, "Les mots de passe ne correspondent pas");
-    } else {
-        showSuccess(confirmPasswordEl);
-        valid = true;
-    }
-
-    return valid;
-};
 
 // called in checkEmail function, confirms email format
 const isEmailValid = function(email) {
@@ -142,13 +123,11 @@ form.addEventListener('submit', function (e) {
     // validate fields
     let isEmailValid = checkEmail();
     let isPasswordValid = checkPassword();
-    let isConfirmPasswordValid = checkConfirmPassword();
-
+   
     let isFormValid = 
         isEmailValid &&
-        isPasswordValid &&
-        isConfirmPasswordValid;
-
+        isPasswordValid
+   
     // if all entries are valid, check input
     if (isFormValid){
         // retrieve user info
@@ -191,8 +170,6 @@ form.addEventListener('input', debounce(function (e) {
         case 'password':
             checkPassword();
             break;
-        case 'confirm-password':
-            checkConfirmPassword();
-            break;
+        
     }
 }));

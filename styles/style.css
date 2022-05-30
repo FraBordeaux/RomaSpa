@@ -1,58 +1,52 @@
+/* body */
 body{
     margin: 0;
     padding: 0;
 }
-/*
-header{
-    background-image: url("../assets/images/backgrounds/pool-overlook-valley-sunset.jpg");
-    object-fit: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-}
-*/
+
+/* sections */
 section{
     padding: 50px;
     margin-left: auto;
     margin-right: auto;
 }
 
+/* section: introduction paragraphe, top of page*/
 .introduction{
     width: 60%;
     text-align: center;
     background-color: white;
-}
-
-h2{
+    }
+.introduction h2{
     color: #B89535;
     padding : 20px;
     font-size: 3em;
-}
-
+    }
 .introduction p{
     color: #004B62;
+    line-height: 1.5em;
 }
 
+/*section: 3 divs to treatments and products */
 .offers{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     height: 500px;
     padding: 20px;
-}
-
+    }
 .offers p{
-    background-color: white;
-    color: #B89535;
+    background-color: #B89535;
+    color: white;
     padding: 15px;
     float: right;
     transform: translateY(430px);
-}
-
+    }
 .offers a{
     text-decoration: none;
 }
 
+/* link towards classic treatments */
 .treatments{
     background-image: url("../assets/images/treatments/massage-hands.jpg");
     object-fit: cover;
@@ -61,6 +55,7 @@ h2{
     width: 30%;
 }
 
+/* link towards vip treatments */
 .vip-treatments{
     background-image: url("../assets/images/treatments/bath-woman-champagne.jpg");
     object-fit: cover;
@@ -69,6 +64,7 @@ h2{
     width: 30%;
 }
 
+/* link towards products */
 .products{
     background-image: url("../assets/images/products/products-index-photo.jpeg");
     object-fit: cover;
@@ -77,14 +73,13 @@ h2{
     width: 30%;
 }
 
-
+/* section: gallery */
 .gallery{
     display: flex;
     justify-content: center;
     object-fit: cover;
     height: 455px; 
-}
-
+    }
 .gallery-card{
     background-color: white;
     padding: 12px;
@@ -94,44 +89,38 @@ h2{
     transform: translate(-189px, 244px);
 }
 
+/* section: destinations*/
 .destinations{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    object-fit: cover;
-    height: 455px; 
-    
-}
-
+    }
 .destinations h2{
     color: #B89535;
-}
-
+    }
 .destinations p{
     color: white;
     transform:  translate(57px, -64px);;
 }
 
-/* carrousel */
-
+/* section: destinations >> carrousel */
 .carousel-wrapper {
     overflow: hidden;
     width: 90%;
     display: flex;
 }
 
-.carousel-wrapper * {
+.carousel-wrapper *{
     box-sizing: border-box;
 }
 
-.carousel {
+.carousel{
     transform-style: preserve-3d;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.carousel__photo {
+.carousel__photo{
     opacity: 0;
     position: absolute;
     top:0;
@@ -142,14 +131,12 @@ h2{
     transition: transform .5s, opacity .5s, z-index .5s;
 }
 
-
 .carousel__photo.initial,
 .carousel__photo.active {
   opacity: 1;
   position: relative;
   z-index: 900;
 }
-
 
 .carousel__photo.prev,
 .carousel__photo.next {
@@ -161,7 +148,6 @@ h2{
 .carousel__photo.next {
   transform: translateX(100%); /* Move 'next' item to the right */
 }
-
 
 .carousel__button--prev,
 .carousel__button--next {
@@ -198,5 +184,3 @@ h2{
   left: 47%;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
-
-

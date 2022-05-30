@@ -20,18 +20,20 @@ header {
     animation: backgroundHeader 10s;
 }
 
+/* burger, logo, profile, cart */
 .header-top{
     display: flex;
     flex-direction: row;
 }
 
+/* logo text and baseline */
 .header-bottom{
     padding-top : 20%;
 }
 
 /* left div hamburger menu lines */
 .header_mobile{
-    width: 15%;
+    width: 20%;
 }
 
 /* white logo centered */
@@ -95,10 +97,12 @@ header svg {
 .title-header h1{
     font-size : 400%;
     padding : 0px;
+    color: #B89535;
 }
 
 .title-header h2{
     padding:0px;
+    color: white;
 }
 
 @keyframes elementApparition {
@@ -271,6 +275,10 @@ svg:hover {
 .divShoppingList p{
     font-weight: normal;
     font-size: 12px;
+}
+
+.empty-cart p{
+    padding-left: 10px;
 }
 
 .full-cart{

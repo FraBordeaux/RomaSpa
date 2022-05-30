@@ -95,6 +95,7 @@ const exitSpace = document.querySelector(".icon_header"); // apply exitDiv here
 let retrieveUserInfo = localStorage.getItem('user'); // format string
 let user = JSON.parse(retrieveUserInfo);// format objet
 
+// add transparent div to control cart menu exit
 exitSpace.appendChild(exitDiv);
 exitDiv.classList.add("exit-div");
     
@@ -134,6 +135,7 @@ iconShoppingList.addEventListener("mouseover",function(){
 
 },true);
 
+// mouse exit div transparent and cart
 function leave(){
 show.forEach(element =>{
     element.addEventListener("mouseleave",function(){
@@ -153,6 +155,14 @@ iconShoppingList.addEventListener("mouseover", isValid =>{
   
 // update user cart information
 function notLoggedIn(){
+
+    // rectangle containing cart items
+    divShoppingList.style.cssText =
+    `
+    display:block;
+    margin-left:0px;
+    `;
+
     divShoppingList.innerHTML = 
         `
         <a href="../pages/log-in.html">
@@ -213,9 +223,3 @@ function selectedProductList(cart){
         </div>
         `;
 }
-
-
-// retrieve product list
-let getProductList = localStorage.getItem('products'); // format string
-let productList = JSON.parse(getProductList);// format objet
-const uniqueProducts = [...new Map(productList.map(item => [item.id, item])).values()]// remove duplicates
