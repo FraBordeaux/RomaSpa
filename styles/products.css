@@ -48,12 +48,10 @@ main{
 }
 
 header{
-    background-image: linear-gradient(180deg,rgba(5,20,1,0.6) 0%,rgba(5,20,1,0.6) 100%), url('../assets/images/backgrounds/elegant-bath-time.jpeg');
-    width:100%;
+    background-image: linear-gradient(180deg,rgba(5,20,1,0.6) 0%,rgba(5,20,1,0.6) 100%), url('../assets/images/backgrounds/elegant-bath-time.jpeg')!important;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 60vh;
     margin-bottom: 3em;
 }
 
@@ -71,7 +69,7 @@ h2{
     font-size: 500%;
     font-family: "Roboto Bold";
     margin-bottom: 1em;
-    margin-top: 1em;
+    margin-top: 0px;
 }
 
 h3{
@@ -87,7 +85,6 @@ h4{
     font-size: 15px;
     padding: 3px;
     margin: 0;
-    margin-top:4em;
     color: rgb(0, 0, 0);
 
 }
@@ -115,9 +112,7 @@ h4{
 .product-list div{
     width: 247px;
     padding: 12px;
-    text-align: center;
-    font-size: 0.8em;
-  
+    text-align: center;  
 }
 
 button{
@@ -140,10 +135,6 @@ button:hover{
     border: 1px solid #B89535;
 }
 
-.productDescription{
-    font-family: fedra;
-    font-size: 15px;
-}
 
 .product-select{
     margin-bottom : 10em;
@@ -163,7 +154,7 @@ button:hover{
 
 .divDescription{
     position: absolute;
-    margin-top: -140px;
+    margin-top: -220px;
     margin-left: -10px;;
     opacity: 0;
 }
@@ -173,7 +164,7 @@ button:hover{
     transition-delay: 0.1s;
     opacity: 1;
     font-family: fedra;
-    font-size: 12px;
+    font-size: 1.2em;
     animation: divDescription 1s;
 }
 

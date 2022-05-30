@@ -48,15 +48,11 @@ main{
 }
 
 header{
-    background-image: linear-gradient(180deg,rgba(5,20,1,0.6) 0%,rgba(5,20,1,0.6) 100%),url('/assets/images/treatments/facial-massage.png') !important;
-    display : flex;
-    flex-direction: column;
-    width:100%;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(180deg,rgba(5,20,1,0.6) 0%,rgba(5,20,1,0.6) 100%), url('../assets/images/backgrounds/lounge-group-pool-mountains.jpg');
     background-size: cover;
-    background-position: center;
-    max-height: 50vh;
-    margin-bottom: 5%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin-bottom: 3em;
 }
 
 .tabs{

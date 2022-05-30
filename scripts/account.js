@@ -77,7 +77,6 @@ const uniqueProducts = [...new Map(productList.map(item => [item.id, item])).val
 // retrieve treatment list
 let getTreatmentList = localStorage.getItem('treatments'); // format string
 let treatmentList = JSON.parse(getTreatmentList);// format objet
-console.log(treatmentList);
 const uniqueTreatments = [...new Map(treatmentList.map(item => [item.treatmentCategory, item])).values()]// remove duplicates
 
 let treatmentCategory = document.querySelector("#treatment-category");// retrieve treatment category dropdown menu in modal
