@@ -6,20 +6,33 @@
 *{
     padding : 0px;
     margin : 0px;
+    font-family: fedra;
+
 }
 
 header {
     height: 100vh;
     display : flex;
+    flex-direction: column;
     background-image: url("../assets/images/backgrounds/background-header.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    animation: backgroundHeader 10s;
 }
 
+.header-top{
+    display: flex;
+    flex-direction: row;
+}
+
+.header-bottom{
+    padding-top : 20%;
+}
+
+/* left div hamburger menu lines */
 .header_mobile{
     width: 15%;
 }
-
 
 /* white logo centered */
 #div_logo_romaheader{
@@ -35,17 +48,6 @@ header {
     height : 175px;
     margin : 1em 0 1em 0;
     animation : elementApparition 5s;
- }
-
-#background_image {
-    height: 100vh;
-    object-fit: cover;
-    z-index: -1;
-    animation: backgroundHeader 10s;
-}
-
-#menu {
-    width : 20%;
 }
 
 /* hamburger menu svg */
@@ -84,7 +86,6 @@ header svg {
 
 /* main header title */
 .title-header {
-    margin-top : 40%;
     margin-left: 15%;
     color: white;
     position : Absolute;
@@ -93,7 +94,6 @@ header svg {
 
 .title-header h1{
     font-size : 400%;
-    font-family: fedra;
     padding : 0px;
 }
 

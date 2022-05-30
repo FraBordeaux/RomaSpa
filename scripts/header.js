@@ -2,6 +2,10 @@
 
 document.querySelector('header').innerHTML = 
         `
+
+        <!-- header top -->
+        <div class="header-top">
+
         <!-- 3 lines of hamburger menu -->
         <div class="header_mobile" onclick="toggleMenu()">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -50,10 +54,14 @@ document.querySelector('header').innerHTML =
             <div class="divShoppingList"><p id="productsSelected"></p></div>    
         </div>
 
+        </div> <!-- end header top -->
+
+        <div class="header-bottom">
         <!-- page title -->
         <div class="title-header">
             <h1>Spa ROMA</h1>
             <h2>Spa de Luxe</h2>
+        </div>
         </div>
       
 `;
