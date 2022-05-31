@@ -1,3 +1,4 @@
+// carousel functions
 (function(d){
 
   var itemClassName = "carousel__photo";

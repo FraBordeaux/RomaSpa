@@ -87,6 +87,13 @@ section{
     text-decoration: none;
 }
 
+@keyframes example {
+    0%   {transform:scale(1);}
+    50%  {transform:scale(1.1)}
+    100% {transform:scale(1);opacity:1;}
+}
+
+
 /* link towards classic treatments */
 .treatments{
     background-image: url("../assets/images/treatments/massage-hands.jpg");
@@ -97,10 +104,8 @@ section{
 }
 
 .treatments:hover{
-    transform: scale(1.1);
-    transition-duration: 1s;
+    animation: example 3s ease-in-out;
 }
-
 
 /* link towards vip treatments */
 .vip-treatments{
@@ -112,8 +117,7 @@ section{
 }
 
 .vip-treatments:hover{
-    transform: scale(1.1);
-    transition-duration: 1s;
+    animation: example 3s ease-in-out;
 }
 
 /* link towards products */
@@ -125,8 +129,7 @@ section{
     width: 27%;
 }
 .products:hover{
-    transform: scale(1.1);
-    transition-duration: 1s;
+    animation: example 3s ease-in-out;
 }
 
 /* section: gallery */
