@@ -91,12 +91,13 @@ allBuyButtons.forEach(item =>{
             name: item.name,
             value: item.value
         };
-        console.log("add item to cart");
         user.userCart.push(myObj); // add product to cart
         user.userCartTotal+= Number(item.value); // update total amount
         localStorage.setItem('user', JSON.stringify(user)); // update user on localStorage
+        updateCart();
     })
 })
+
 
 
 //-----------------------js Filtre

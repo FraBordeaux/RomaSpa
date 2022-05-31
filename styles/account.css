@@ -105,7 +105,7 @@ h2{
     justify-content: space-between;
 }
 
-.cart-total{
+.cart-total-account{
     display: flex;
     flex-direction: row;
     justify-content: space-between;

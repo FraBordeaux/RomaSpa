@@ -163,17 +163,21 @@ function notLoggedIn(){
 
 // update user cart information
 function updateCart(){
+
+    let retrievedUser2 = localStorage.getItem('user'); // local json string
+    let user2 = JSON.parse(retrievedUser2); // changed to object
+    let cart = user2.userCart;
+
     divShoppingList.innerHTML = 
         `
-        <h2> Bienvenue ${user1.userFirstName}! </h2>
+        <h2> Bienvenue ${user2.userFirstName}! </h2>
         `
         ;
         
-    if((user1.userCart.length) === 0){
+    if((cart.length) === 0){
         emptyCart();
     } else {
-        console.log(user1.userCart);
-        selectedProductList(user1.userCart);
+        selectedProductList(user2);
     }
 }
 
@@ -188,14 +192,14 @@ function emptyCart(){
 }
 
 // if full, show list of products in cart
-function selectedProductList(cart){
+function selectedProductList(userInput){
     divShoppingList.innerHTML +=
     `
     <div class="full-cart">
         <h3>Voici les produits dans votre panier:</h3>
     `;
 
-    cart.forEach(item =>{
+    userInput.userCart.forEach(item =>{
         divShoppingList.innerHTML +=
         `
         <div class="items-in-cart">
@@ -208,8 +212,9 @@ function selectedProductList(cart){
     divShoppingList.innerHTML +=
         `
         <div class="cart-total">
-            <p>Prix total : ${user1.userCartTotal}€</p>
-            <button id="pay">Régler</button>
+            <p>Prix total : ${userInput.userCartTotal}€</p>
+            <a href="../pages/account.html"><button id="pay">Régler</button></a>
         </div>
         `;
 }
+

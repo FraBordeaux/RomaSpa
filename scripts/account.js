@@ -60,7 +60,7 @@ function selectedProductList(cart){
         
     selectedProducts.innerHTML +=
         `
-        <div class="cart-total">
+        <div class="cart-total-account">
             <p>Nombre de produits dans le panier : ${cart.length} </p>
             <p>Prix total : ${user.userCartTotal}€</p>
         </div>
