@@ -98,7 +98,9 @@ section{
 
 .treatments:hover{
     transform: scale(1.1);
+    transition-duration: 1s;
 }
+
 
 /* link towards vip treatments */
 .vip-treatments{
@@ -109,6 +111,11 @@ section{
     width: 28%;
 }
 
+.vip-treatments:hover{
+    transform: scale(1.1);
+    transition-duration: 1s;
+}
+
 /* link towards products */
 .products{
     background-image: url("../assets/images/products/products-index-photo.jpeg");
@@ -116,6 +123,10 @@ section{
     background-position: center;
     background-repeat: no-repeat;
     width: 28%;
+}
+.products:hover{
+    transform: scale(1.1);
+    transition-duration: 1s;
 }
 
 /* section: gallery */
