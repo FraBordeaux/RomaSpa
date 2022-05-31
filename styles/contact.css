@@ -61,6 +61,14 @@ header{
     margin-bottom: 3em;
 }
 
+h1{
+    text-align: center;
+    transform: translate(0px, -275px);
+    color:white;
+    font-family: "Roboto Bold";
+    font-size: 500%;
+}
+
 /* left side */
 main .left-side-contact {
     width: 50%;

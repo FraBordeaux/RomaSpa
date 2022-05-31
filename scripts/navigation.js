@@ -172,6 +172,7 @@ function updateCart(){
     if((user1.userCart.length) === 0){
         emptyCart();
     } else {
+        console.log(user1.userCart);
         selectedProductList(user1.userCart);
     }
 }

@@ -59,6 +59,14 @@ header{
     margin: 10px 20px;
 }
 
+h1{
+    text-align: center;
+    transform: translate(0px, -275px);
+    color:white;
+    font-family: "Roboto Bold";
+    font-size: 500%;
+}
+
 h2{
     color : white;
     font-size: 500%;

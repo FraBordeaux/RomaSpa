@@ -49,6 +49,14 @@ header{
     margin-bottom: 3em;
 }
 
+h1{
+    text-align: center;
+    transform: translate(0px, -275px);
+    color:white;
+    font-family: "Roboto Bold";
+    font-size: 500%;
+}
+
 :root {
     --error-color: #dc3545;
     --success-color: #28a745;

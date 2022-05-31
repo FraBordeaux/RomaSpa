@@ -47,6 +47,14 @@ header{
     background-size: cover;
 }
 
+h1{
+    text-align: center;
+    transform: translate(0px, -275px);
+    color:white;
+    font-family: "Roboto Bold";
+    font-size: 500%;
+}
+
 .container-gallery {
     width: 100%;
     display: flex;
